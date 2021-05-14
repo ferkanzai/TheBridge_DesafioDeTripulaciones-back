@@ -1,0 +1,732 @@
+[
+  {
+    "carName": "Audi e-tron Sportback 50 quattro",
+    "rangeData": {
+      "City - Cold Weather": "290 km",
+      "Highway - Cold Weather": "215 km",
+      "Combined - Cold Weather": "250 km",
+      "City - Mild Weather": "415 km",
+      "Highway - Mild Weather": "270 km",
+      "Combined - Mild Weather": "330 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "6.8 sec",
+      "Top Speed": "190 km/h",
+      "Electric Range": "295 km",
+      "Total Power": "230 kW (313 PS)",
+      "Total Torque": "540 Nm",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "71.0 kWh",
+      "Battery Useable": "64.7 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->295 km)": "7 hours",
+      "Charge Speed": "43 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "120 kW DC",
+      "Fastcharge Time (30->236 km)": "25 min",
+      "Fastcharge Speed": "490 km/h"
+    },
+    "efficiencyData": {
+      "Range": "287 km",
+      "Vehicle Consumption": "225 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "2.5 l/100km",
+      "Rated Consumption": "254 Wh/km",
+      "Rated Fuel Equivalent": "2.9 l/100km",
+      "Vehicle Fuel Equivalent": "2.5 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "223 Wh/km",
+      "Highway - Cold Weather": "301 Wh/km",
+      "Combined - Cold Weather": "259 Wh/km",
+      "City - Mild Weather": "156 Wh/km",
+      "Highway - Mild Weather": "240 Wh/km",
+      "Combined - Mild Weather": "196 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4901 mm",
+      "Width": "1935 mm",
+      "Width with mirrors": "2189 mm",
+      "Height": "1616 mm",
+      "Wheelbase": "2928 mm",
+      "Weight Unladen (EU)": "2445 kg",
+      "Gross Vehicle Weight (GVWR)": "3040 kg",
+      "Max. Payload": "670 kg",
+      "Cargo Volume": "615 L",
+      "Cargo Volume Max": "1655 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "75 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1800 kg",
+      "Vertical Load Max": "80 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "12.2 m",
+      "Platform": "VW MLB",
+      "Car Body": "SUV",
+      "Segment": "JE - Executive",
+      "Roof Rails": "Yes",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2020-05-31T22:00:00.000Z"
+  },
+  {
+    "carName": "Ford Mustang Mach-E GT",
+    "rangeData": {
+      "City - Cold Weather *": "415 km",
+      "Highway - Cold Weather *": "295 km",
+      "Combined - Cold Weather *": "350 km",
+      "City - Mild Weather *": "595 km",
+      "Highway - Mild Weather *": "370 km",
+      "Combined - Mild Weather *": "465 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "3.7 sec",
+      "Top Speed": "200 km/h",
+      "Electric Range *": "410 km",
+      "Total Power": "358 kW (487 PS)",
+      "Total Torque": "830 Nm",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "98.7 kWh",
+      "Battery Useable": "88.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->410 km)": "9h30m",
+      "Charge Speed": "44 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "150 kW DC",
+      "Fastcharge Time (41->328 km)": "43 min",
+      "Fastcharge Speed": "400 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "410 km",
+      "Vehicle Consumption *": "215 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.4 l/100km",
+      "Range": "490 km",
+      "Rated Consumption": "No Data",
+      "Vehicle Consumption": "180 Wh/km",
+      "Rated Fuel Equivalent": "No Data",
+      "Vehicle Fuel Equivalent": "2.0 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "212 Wh/km",
+      "Highway - Cold Weather *": "298 Wh/km",
+      "Combined - Cold Weather *": "251 Wh/km",
+      "City - Mild Weather *": "148 Wh/km",
+      "Highway - Mild Weather *": "238 Wh/km",
+      "Combined - Mild Weather *": "189 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4713 mm",
+      "Width": "1881 mm",
+      "Width with mirrors": "2097 mm",
+      "Height": "1625 mm",
+      "Wheelbase": "2984 mm",
+      "Weight Unladen (EU) *": "2250 kg",
+      "Gross Vehicle Weight (GVWR)": "No Data",
+      "Max. Payload": "No Data",
+      "Cargo Volume": "322 L",
+      "Cargo Volume Max": "1420 L",
+      "Cargo Volume Frunk": "100 L",
+      "Roof Load": "0 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "750 kg",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "11.6 m",
+      "Platform": "No Data",
+      "Car Body": "SUV",
+      "Segment": "JD - Large",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": false,
+    "releaseDate": "2021-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Ford Mustang Mach-E ER AWD",
+    "rangeData": {
+      "City - Cold Weather *": "420 km",
+      "Highway - Cold Weather *": "300 km",
+      "Combined - Cold Weather *": "360 km",
+      "City - Mild Weather *": "610 km",
+      "Highway - Mild Weather *": "380 km",
+      "Combined - Mild Weather *": "475 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "5.1 sec",
+      "Top Speed": "180 km/h",
+      "Electric Range *": "420 km",
+      "Total Power": "258 kW (351 PS)",
+      "Total Torque": "580 Nm",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "98.7 kWh",
+      "Battery Useable": "88.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->420 km)": "9h30m",
+      "Charge Speed": "45 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "150 kW DC",
+      "Fastcharge Time (42->336 km)": "43 min",
+      "Fastcharge Speed": "410 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "420 km",
+      "Vehicle Consumption *": "210 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.4 l/100km",
+      "Range": "540 km",
+      "Rated Consumption": "187 Wh/km",
+      "Vehicle Consumption": "163 Wh/km",
+      "Rated Fuel Equivalent": "2.1 l/100km",
+      "Vehicle Fuel Equivalent": "1.8 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "210 Wh/km",
+      "Highway - Cold Weather *": "293 Wh/km",
+      "Combined - Cold Weather *": "244 Wh/km",
+      "City - Mild Weather *": "144 Wh/km",
+      "Highway - Mild Weather *": "232 Wh/km",
+      "Combined - Mild Weather *": "185 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4713 mm",
+      "Width": "1881 mm",
+      "Width with mirrors": "2097 mm",
+      "Height": "1625 mm",
+      "Wheelbase": "2984 mm",
+      "Weight Unladen (EU)": "2218 kg",
+      "Gross Vehicle Weight (GVWR)": "2690 kg",
+      "Max. Payload": "547 kg",
+      "Cargo Volume": "322 L",
+      "Cargo Volume Max": "1420 L",
+      "Cargo Volume Frunk": "100 L",
+      "Roof Load": "0 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "750 kg",
+      "Vertical Load Max": "30 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "11.6 m",
+      "Platform": "No Data",
+      "Car Body": "SUV",
+      "Segment": "JD - Large",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2021-03-31T22:00:00.000Z"
+  },
+  {
+    "carName": "Ford Mustang Mach-E SR AWD",
+    "rangeData": {
+      "City - Cold Weather *": "335 km",
+      "Highway - Cold Weather *": "235 km",
+      "Combined - Cold Weather *": "280 km",
+      "City - Mild Weather *": "485 km",
+      "Highway - Mild Weather *": "300 km",
+      "Combined - Mild Weather *": "375 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "5.6 sec",
+      "Top Speed": "180 km/h",
+      "Electric Range *": "330 km",
+      "Total Power": "198 kW (269 PS)",
+      "Total Torque": "580 Nm",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "75.7 kWh",
+      "Battery Useable": "68.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->330 km)": "7h30m",
+      "Charge Speed": "45 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "115 kW DC",
+      "Fastcharge Time (33->264 km)": "38 min",
+      "Fastcharge Speed": "360 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "330 km",
+      "Vehicle Consumption *": "206 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.3 l/100km",
+      "Range": "400 km",
+      "Rated Consumption": "195 Wh/km",
+      "Vehicle Consumption": "170 Wh/km",
+      "Rated Fuel Equivalent": "2.2 l/100km",
+      "Vehicle Fuel Equivalent": "1.9 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "203 Wh/km",
+      "Highway - Cold Weather *": "289 Wh/km",
+      "Combined - Cold Weather *": "243 Wh/km",
+      "City - Mild Weather *": "140 Wh/km",
+      "Highway - Mild Weather *": "227 Wh/km",
+      "Combined - Mild Weather *": "181 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4713 mm",
+      "Width": "1881 mm",
+      "Width with mirrors": "2097 mm",
+      "Height": "1625 mm",
+      "Wheelbase": "2984 mm",
+      "Weight Unladen (EU)": "2086 kg",
+      "Gross Vehicle Weight (GVWR)": "2640 kg",
+      "Max. Payload": "629 kg",
+      "Cargo Volume": "322 L",
+      "Cargo Volume Max": "1420 L",
+      "Cargo Volume Frunk": "100 L",
+      "Roof Load": "0 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "750 kg",
+      "Vertical Load Max": "30 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "11.6 m",
+      "Platform": "No Data",
+      "Car Body": "SUV",
+      "Segment": "JD - Large",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2021-03-31T22:00:00.000Z"
+  },
+  {
+    "carName": "Ford Mustang Mach-E ER RWD",
+    "rangeData": {
+      "City - Cold Weather *": "440 km",
+      "Highway - Cold Weather *": "315 km",
+      "Combined - Cold Weather *": "375 km",
+      "City - Mild Weather *": "640 km",
+      "Highway - Mild Weather *": "395 km",
+      "Combined - Mild Weather *": "500 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "6.2 sec",
+      "Top Speed": "180 km/h",
+      "Electric Range *": "440 km",
+      "Total Power": "216 kW (294 PS)",
+      "Total Torque": "430 Nm",
+      "Drive": "Rear"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "98.7 kWh",
+      "Battery Useable": "88.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->440 km)": "9h30m",
+      "Charge Speed": "47 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "150 kW DC",
+      "Fastcharge Time (44->352 km)": "43 min",
+      "Fastcharge Speed": "430 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "440 km",
+      "Vehicle Consumption *": "200 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.2 l/100km",
+      "Range": "610 km",
+      "Rated Consumption": "165 Wh/km",
+      "Vehicle Consumption": "144 Wh/km",
+      "Rated Fuel Equivalent": "1.9 l/100km",
+      "Vehicle Fuel Equivalent": "1.6 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "200 Wh/km",
+      "Highway - Cold Weather *": "279 Wh/km",
+      "Combined - Cold Weather *": "235 Wh/km",
+      "City - Mild Weather *": "138 Wh/km",
+      "Highway - Mild Weather *": "223 Wh/km",
+      "Combined - Mild Weather *": "176 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4713 mm",
+      "Width": "1881 mm",
+      "Width with mirrors": "2097 mm",
+      "Height": "1625 mm",
+      "Wheelbase": "2984 mm",
+      "Weight Unladen (EU)": "2111 kg",
+      "Gross Vehicle Weight (GVWR)": "2605 kg",
+      "Max. Payload": "569 kg",
+      "Cargo Volume": "322 L",
+      "Cargo Volume Max": "1420 L",
+      "Cargo Volume Frunk": "100 L",
+      "Roof Load": "0 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "750 kg",
+      "Vertical Load Max": "30 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "11.6 m",
+      "Platform": "No Data",
+      "Car Body": "SUV",
+      "Segment": "JD - Large",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2021-03-31T22:00:00.000Z"
+  },
+  {
+    "carName": "Ford Mustang Mach-E SR RWD",
+    "rangeData": {
+      "City - Cold Weather *": "350 km",
+      "Highway - Cold Weather *": "245 km",
+      "Combined - Cold Weather *": "295 km",
+      "City - Mild Weather *": "510 km",
+      "Highway - Mild Weather *": "310 km",
+      "Combined - Mild Weather *": "395 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "6.1 sec",
+      "Top Speed": "180 km/h",
+      "Electric Range *": "345 km",
+      "Total Power": "198 kW (269 PS)",
+      "Total Torque": "430 Nm",
+      "Drive": "Rear"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "75.7 kWh",
+      "Battery Useable": "68.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->345 km)": "7h30m",
+      "Charge Speed": "47 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "115 kW DC",
+      "Fastcharge Time (35->276 km)": "38 min",
+      "Fastcharge Speed": "380 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "345 km",
+      "Vehicle Consumption *": "197 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.2 l/100km",
+      "Range": "440 km",
+      "Rated Consumption": "172 Wh/km",
+      "Vehicle Consumption": "155 Wh/km",
+      "Rated Fuel Equivalent": "1.9 l/100km",
+      "Vehicle Fuel Equivalent": "1.7 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "194 Wh/km",
+      "Highway - Cold Weather *": "278 Wh/km",
+      "Combined - Cold Weather *": "231 Wh/km",
+      "City - Mild Weather *": "133 Wh/km",
+      "Highway - Mild Weather *": "219 Wh/km",
+      "Combined - Mild Weather *": "172 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4713 mm",
+      "Width": "1881 mm",
+      "Width with mirrors": "2097 mm",
+      "Height": "1625 mm",
+      "Wheelbase": "2984 mm",
+      "Weight Unladen (EU)": "1993 kg",
+      "Gross Vehicle Weight (GVWR)": "2555 kg",
+      "Max. Payload": "637 kg",
+      "Cargo Volume": "322 L",
+      "Cargo Volume Max": "1420 L",
+      "Cargo Volume Frunk": "100 L",
+      "Roof Load": "0 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "750 kg",
+      "Vertical Load Max": "30 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "11.6 m",
+      "Platform": "No Data",
+      "Car Body": "SUV",
+      "Segment": "JD - Large",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2021-03-31T22:00:00.000Z"
+  },
+  {
+    "carName": "Mazda MX-30",
+    "rangeData": {
+      "City - Cold Weather": "170 km",
+      "Highway - Cold Weather": "120 km",
+      "Combined - Cold Weather": "145 km",
+      "City - Mild Weather": "255 km",
+      "Highway - Mild Weather": "155 km",
+      "Combined - Mild Weather": "195 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "9.7 sec",
+      "Top Speed": "140 km/h",
+      "Electric Range": "170 km",
+      "Total Power": "105 kW (143 PS)",
+      "Total Torque": "265 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "35.5 kWh",
+      "Battery Useable*": "30.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Right Side - Rear",
+      "Charge Power": "6.6 kW AC",
+      "Charge Time (0->170 km)": "5h30m",
+      "Charge Speed": "32 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Right Side - Rear",
+      "Fastcharge Power (max)": "37 kW DC",
+      "Fastcharge Time (17->136 km)": "39 min",
+      "Fastcharge Speed": "180 km/h"
+    },
+    "efficiencyData": {
+      "Range": "200 km",
+      "Vehicle Consumption": "150 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "2.0 l/100km",
+      "Rated Consumption": "190 Wh/km",
+      "Rated Fuel Equivalent": "2.1 l/100km",
+      "Vehicle Fuel Equivalent": "1.7 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "176 Wh/km",
+      "Highway - Cold Weather": "250 Wh/km",
+      "Combined - Cold Weather": "207 Wh/km",
+      "City - Mild Weather": "118 Wh/km",
+      "Highway - Mild Weather": "194 Wh/km",
+      "Combined - Mild Weather": "154 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4395 mm",
+      "Width": "1795 mm",
+      "Width with mirrors": "2035 mm",
+      "Height": "1570 mm",
+      "Wheelbase": "2655 mm",
+      "Weight Unladen (EU)": "1720 kg",
+      "Gross Vehicle Weight (GVWR)": "2119 kg",
+      "Max. Payload": "474 kg",
+      "Cargo Volume": "366 L",
+      "Cargo Volume Max": "1171 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "75 kg",
+      "Tow Hitch Possible": "No",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "0 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "11.4 m",
+      "Platform": "No Data",
+      "Car Body": "SUV",
+      "Segment": "JC - Medium",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2020-08-31T22:00:00.000Z"
+  },
+  {
+    "carName": "Mercedes EQV 300 Long",
+    "rangeData": {
+      "City - Cold Weather": "340 km",
+      "Highway - Cold Weather": "230 km",
+      "Combined - Cold Weather": "280 km",
+      "City - Mild Weather": "465 km",
+      "Highway - Mild Weather": "280 km",
+      "Combined - Mild Weather": "355 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "12.1 sec",
+      "Top Speed": "160 km/h",
+      "Electric Range": "320 km",
+      "Total Power": "150 kW (204 PS)",
+      "Total Torque": "362 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "100.0 kWh",
+      "Battery Useable": "90.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->320 km)": "9h45m",
+      "Charge Speed": "33 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "110 kW DC",
+      "Fastcharge Time (32->256 km)": "47 min",
+      "Fastcharge Speed": "280 km/h"
+    },
+    "efficiencyData": {
+      "Range": "363 km",
+      "Vehicle Consumption": "248 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "3.2 l/100km",
+      "Rated Consumption": "276 Wh/km",
+      "Rated Fuel Equivalent": "3.1 l/100km",
+      "Vehicle Fuel Equivalent": "2.8 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "265 Wh/km",
+      "Highway - Cold Weather": "391 Wh/km",
+      "Combined - Cold Weather": "321 Wh/km",
+      "City - Mild Weather": "194 Wh/km",
+      "Highway - Mild Weather": "321 Wh/km",
+      "Combined - Mild Weather": "254 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "5140 mm",
+      "Width": "1928 mm",
+      "Width with mirrors": "2244 mm",
+      "Height": "1901 mm",
+      "Wheelbase": "3200 mm",
+      "Weight Unladen (EU)": "2635 kg",
+      "Gross Vehicle Weight (GVWR)": "3500 kg",
+      "Max. Payload": "940 kg",
+      "Cargo Volume": "1030 L",
+      "Cargo Volume Max": "4630 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "No Data",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "No Data",
+      "Towing Weight Braked": "No Data",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "7 people",
+      "Isofix": "No Data",
+      "Turning Circle": "11.8 m",
+      "Platform": "No Data",
+      "Car Body": "Small Passenger Van",
+      "Segment": "N - Commercial",
+      "Roof Rails": "Yes",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2020-08-31T22:00:00.000Z"
+  },
+  {
+    "carName": "Hyundai Kona Electric 39 kWh",
+    "rangeData": {
+      "City - Cold Weather": "245 km",
+      "Highway - Cold Weather": "175 km",
+      "Combined - Cold Weather": "210 km",
+      "City - Mild Weather": "380 km",
+      "Highway - Mild Weather": "230 km",
+      "Combined - Mild Weather": "290 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "9.9 sec",
+      "Top Speed": "155 km/h",
+      "Electric Range": "250 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "395 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "42.0 kWh",
+      "Battery Useable": "39.2 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Front - Middle",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->250 km)": "4h15m",
+      "Charge Speed": "60 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Front - Middle",
+      "Fastcharge Power (max)": "50  kW DC",
+      "Fastcharge Time (25->200 km)": "50 min",
+      "Fastcharge Speed": "210 km/h"
+    },
+    "efficiencyData": {
+      "Range": "305 km",
+      "Vehicle Consumption": "129 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "1.8 l/100km",
+      "Rated Consumption": "143 Wh/km",
+      "Rated Fuel Equivalent": "1.6 l/100km",
+      "Vehicle Fuel Equivalent": "1.4 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "160 Wh/km",
+      "Highway - Cold Weather": "224 Wh/km",
+      "Combined - Cold Weather": "187 Wh/km",
+      "City - Mild Weather": "103 Wh/km",
+      "Highway - Mild Weather": "170 Wh/km",
+      "Combined - Mild Weather": "135 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4180 mm",
+      "Width": "1800 mm",
+      "Width with mirrors": "2070 mm",
+      "Height": "1570 mm",
+      "Wheelbase": "2600 mm",
+      "Weight Unladen (EU)": "1610 kg",
+      "Gross Vehicle Weight (GVWR)": "2020 kg",
+      "Max. Payload": "485 kg",
+      "Cargo Volume": "361 L",
+      "Cargo Volume Max": "1143 L",
+      "Cargo Volume Frunk": "0 L",
+      "Roof Load": "80 kg",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "10.6 m",
+      "Platform": "No Data",
+      "Car Body": "SUV",
+      "Segment": "JB - Small",
+      "Roof Rails": "Yes",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2019-10-31T23:00:00.000Z"
+  }
+]

@@ -1,0 +1,738 @@
+[
+  {
+    "carName": "Opel Zafira-e Life L 50 kWh",
+    "rangeData": {
+      "City - Cold Weather *": "195 km",
+      "Highway - Cold Weather *": "130 km",
+      "Combined - Cold Weather *": "160 km",
+      "City - Mild Weather *": "270 km",
+      "Highway - Mild Weather *": "160 km",
+      "Combined - Mild Weather *": "205 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "12.1 sec",
+      "Top Speed": "130 km/h",
+      "Electric Range *": "180 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "260 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "50.0 kWh",
+      "Battery Useable*": "45.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "7.4 kW AC",
+      "Charge Time (0->180 km)": "7h15m",
+      "Charge Speed": "25 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "99 kW DC",
+      "Fastcharge Time (18->144 km)": "31 min",
+      "Fastcharge Speed": "240 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "180 km",
+      "Vehicle Consumption *": "250 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.8 l/100km",
+      "Range": "230 km",
+      "Rated Consumption": "No Data",
+      "Vehicle Consumption": "196 Wh/km",
+      "Rated Fuel Equivalent": "No Data",
+      "Vehicle Fuel Equivalent": "2.2 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "231 Wh/km",
+      "Highway - Cold Weather *": "346 Wh/km",
+      "Combined - Cold Weather *": "281 Wh/km",
+      "City - Mild Weather *": "167 Wh/km",
+      "Highway - Mild Weather *": "281 Wh/km",
+      "Combined - Mild Weather *": "220 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "5306 mm",
+      "Width": "1920 mm",
+      "Width with mirrors": "2204 mm",
+      "Height": "1890 mm",
+      "Wheelbase": "3275 mm",
+      "Weight Unladen (EU)": "1989 kg",
+      "Gross Vehicle Weight (GVWR)": "2965 kg",
+      "Max. Payload": "1051 kg",
+      "Cargo Volume": "No Data",
+      "Cargo Volume Max": "No Data",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "0 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1000 kg",
+      "Vertical Load Max": "60 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "9 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "12.4 m",
+      "Platform": "PSA EMP2",
+      "Car Body": "Small Passenger Van",
+      "Segment": "N - Commercial",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2020-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Opel Zafira-e Life M 50 kWh",
+    "rangeData": {
+      "City - Cold Weather *": "195 km",
+      "Highway - Cold Weather *": "130 km",
+      "Combined - Cold Weather *": "160 km",
+      "City - Mild Weather *": "275 km",
+      "Highway - Mild Weather *": "160 km",
+      "Combined - Mild Weather *": "205 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "12.1 sec",
+      "Top Speed": "130 km/h",
+      "Electric Range *": "185 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "260 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "50.0 kWh",
+      "Battery Useable*": "45.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "7.4 kW AC",
+      "Charge Time (0->185 km)": "7h15m",
+      "Charge Speed": "26 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "99 kW DC",
+      "Fastcharge Time (19->148 km)": "31 min",
+      "Fastcharge Speed": "250 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "185 km",
+      "Vehicle Consumption *": "243 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.7 l/100km",
+      "Range": "230 km",
+      "Rated Consumption": "No Data",
+      "Vehicle Consumption": "196 Wh/km",
+      "Rated Fuel Equivalent": "No Data",
+      "Vehicle Fuel Equivalent": "2.2 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "231 Wh/km",
+      "Highway - Cold Weather *": "346 Wh/km",
+      "Combined - Cold Weather *": "281 Wh/km",
+      "City - Mild Weather *": "164 Wh/km",
+      "Highway - Mild Weather *": "281 Wh/km",
+      "Combined - Mild Weather *": "220 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4956 mm",
+      "Width": "1920 mm",
+      "Width with mirrors": "2204 mm",
+      "Height": "1890 mm",
+      "Wheelbase": "3275 mm",
+      "Weight Unladen (EU)": "1969 kg",
+      "Gross Vehicle Weight (GVWR)": "2950 kg",
+      "Max. Payload": "1056 kg",
+      "Cargo Volume": "No Data",
+      "Cargo Volume Max": "No Data",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "0 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1000 kg",
+      "Vertical Load Max": "60 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "9 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "12.4 m",
+      "Platform": "PSA EMP2",
+      "Car Body": "Small Passenger Van",
+      "Segment": "N - Commercial",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2020-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Opel Zafira-e Life S 50 kWh",
+    "rangeData": {
+      "City - Cold Weather *": "195 km",
+      "Highway - Cold Weather *": "130 km",
+      "Combined - Cold Weather *": "160 km",
+      "City - Mild Weather *": "275 km",
+      "Highway - Mild Weather *": "160 km",
+      "Combined - Mild Weather *": "205 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "12.1 sec",
+      "Top Speed": "130 km/h",
+      "Electric Range *": "185 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "260 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "50.0 kWh",
+      "Battery Useable*": "45.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "7.4 kW AC",
+      "Charge Time (0->185 km)": "7h15m",
+      "Charge Speed": "26 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "99 kW DC",
+      "Fastcharge Time (19->148 km)": "31 min",
+      "Fastcharge Speed": "250 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "185 km",
+      "Vehicle Consumption *": "243 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.7 l/100km",
+      "Range": "230 km",
+      "Rated Consumption": "No Data",
+      "Vehicle Consumption": "196 Wh/km",
+      "Rated Fuel Equivalent": "No Data",
+      "Vehicle Fuel Equivalent": "2.2 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "231 Wh/km",
+      "Highway - Cold Weather *": "346 Wh/km",
+      "Combined - Cold Weather *": "281 Wh/km",
+      "City - Mild Weather *": "164 Wh/km",
+      "Highway - Mild Weather *": "281 Wh/km",
+      "Combined - Mild Weather *": "220 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4606 mm",
+      "Width": "1920 mm",
+      "Width with mirrors": "2204 mm",
+      "Height": "1905 mm",
+      "Wheelbase": "2925 mm",
+      "Weight Unladen (EU)": "1932 kg",
+      "Gross Vehicle Weight (GVWR)": "2855 kg",
+      "Max. Payload": "998 kg",
+      "Cargo Volume": "No Data",
+      "Cargo Volume Max": "No Data",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "0 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1000 kg",
+      "Vertical Load Max": "60 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "9 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "11.3 m",
+      "Platform": "PSA EMP2",
+      "Car Body": "Small Passenger Van",
+      "Segment": "N - Commercial",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2020-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Citroen e-SpaceTourer XL 75 kWh",
+    "rangeData": {
+      "City - Cold Weather *": "285 km",
+      "Highway - Cold Weather *": "190 km",
+      "Combined - Cold Weather *": "235 km",
+      "City - Mild Weather *": "400 km",
+      "Highway - Mild Weather *": "235 km",
+      "Combined - Mild Weather *": "300 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "13.3 sec",
+      "Top Speed": "130 km/h",
+      "Electric Range *": "270 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "260 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "75.0 kWh",
+      "Battery Useable*": "68.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "7.4 kW AC",
+      "Charge Time (0->270 km)": "11 hours",
+      "Charge Speed": "25 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "100 kW DC",
+      "Fastcharge Time (27->216 km)": "38 min",
+      "Fastcharge Speed": "290 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "270 km",
+      "Vehicle Consumption *": "252 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.8 l/100km",
+      "Range": "330 km",
+      "Rated Consumption": "295 Wh/km",
+      "Vehicle Consumption": "206 Wh/km",
+      "Rated Fuel Equivalent": "3.3 l/100km",
+      "Vehicle Fuel Equivalent": "2.3 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "239 Wh/km",
+      "Highway - Cold Weather *": "358 Wh/km",
+      "Combined - Cold Weather *": "289 Wh/km",
+      "City - Mild Weather *": "170 Wh/km",
+      "Highway - Mild Weather *": "289 Wh/km",
+      "Combined - Mild Weather *": "227 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "5308 mm",
+      "Width": "1920 mm",
+      "Width with mirrors": "2204 mm",
+      "Height": "1890 mm",
+      "Wheelbase": "3275 mm",
+      "Weight Unladen (EU)": "2167 kg",
+      "Gross Vehicle Weight (GVWR)": "3100 kg",
+      "Max. Payload": "1008 kg",
+      "Cargo Volume": "912 L",
+      "Cargo Volume Max": "3497 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "100 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1000 kg",
+      "Vertical Load Max": "60 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "9 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "11.5 m",
+      "Platform": "PSA EMP2",
+      "Car Body": "Small Passenger Van",
+      "Segment": "N - Commercial",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2021-01-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Citroen e-SpaceTourer M 75 kWh",
+    "rangeData": {
+      "City - Cold Weather *": "285 km",
+      "Highway - Cold Weather *": "190 km",
+      "Combined - Cold Weather *": "235 km",
+      "City - Mild Weather *": "400 km",
+      "Highway - Mild Weather *": "235 km",
+      "Combined - Mild Weather *": "300 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "13.3 sec",
+      "Top Speed": "130 km/h",
+      "Electric Range *": "270 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "260 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "75.0 kWh",
+      "Battery Useable*": "68.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "7.4 kW AC",
+      "Charge Time (0->270 km)": "11 hours",
+      "Charge Speed": "25 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "100 kW DC",
+      "Fastcharge Time (27->216 km)": "38 min",
+      "Fastcharge Speed": "290 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "270 km",
+      "Vehicle Consumption *": "252 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.8 l/100km",
+      "Range": "330 km",
+      "Rated Consumption": "295 Wh/km",
+      "Vehicle Consumption": "206 Wh/km",
+      "Rated Fuel Equivalent": "3.3 l/100km",
+      "Vehicle Fuel Equivalent": "2.3 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "239 Wh/km",
+      "Highway - Cold Weather *": "358 Wh/km",
+      "Combined - Cold Weather *": "289 Wh/km",
+      "City - Mild Weather *": "170 Wh/km",
+      "Highway - Mild Weather *": "289 Wh/km",
+      "Combined - Mild Weather *": "227 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4956 mm",
+      "Width": "1920 mm",
+      "Width with mirrors": "2204 mm",
+      "Height": "1890 mm",
+      "Wheelbase": "3275 mm",
+      "Weight Unladen (EU)": "2140 kg",
+      "Gross Vehicle Weight (GVWR)": "3100 kg",
+      "Max. Payload": "1035 kg",
+      "Cargo Volume": "507 L",
+      "Cargo Volume Max": "3061 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "100 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1000 kg",
+      "Vertical Load Max": "60 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "9 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "11.5 m",
+      "Platform": "PSA EMP2",
+      "Car Body": "Small Passenger Van",
+      "Segment": "N - Commercial",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2021-01-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Citroen e-SpaceTourer XL 50 kWh",
+    "rangeData": {
+      "City - Cold Weather *": "195 km",
+      "Highway - Cold Weather *": "130 km",
+      "Combined - Cold Weather *": "160 km",
+      "City - Mild Weather *": "270 km",
+      "Highway - Mild Weather *": "160 km",
+      "Combined - Mild Weather *": "205 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "12.1 sec",
+      "Top Speed": "130 km/h",
+      "Electric Range *": "180 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "260 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "50.0 kWh",
+      "Battery Useable*": "45.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "7.4 kW AC",
+      "Charge Time (0->180 km)": "7h15m",
+      "Charge Speed": "25 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "99 kW DC",
+      "Fastcharge Time (18->144 km)": "31 min",
+      "Fastcharge Speed": "240 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "180 km",
+      "Vehicle Consumption *": "250 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.8 l/100km",
+      "Range": "220 km",
+      "Rated Consumption": "254 Wh/km",
+      "Vehicle Consumption": "205 Wh/km",
+      "Rated Fuel Equivalent": "2.9 l/100km",
+      "Vehicle Fuel Equivalent": "2.3 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "231 Wh/km",
+      "Highway - Cold Weather *": "346 Wh/km",
+      "Combined - Cold Weather *": "281 Wh/km",
+      "City - Mild Weather *": "167 Wh/km",
+      "Highway - Mild Weather *": "281 Wh/km",
+      "Combined - Mild Weather *": "220 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "5308 mm",
+      "Width": "1920 mm",
+      "Width with mirrors": "2204 mm",
+      "Height": "1890 mm",
+      "Wheelbase": "3275 mm",
+      "Weight Unladen (EU)": "1989 kg",
+      "Gross Vehicle Weight (GVWR)": "2965 kg",
+      "Max. Payload": "1051 kg",
+      "Cargo Volume": "912 L",
+      "Cargo Volume Max": "3497 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "100 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1000 kg",
+      "Vertical Load Max": "60 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "9 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "11.5 m",
+      "Platform": "PSA EMP2",
+      "Car Body": "Small Passenger Van",
+      "Segment": "N - Commercial",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2020-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Citroen e-SpaceTourer M 50 kWh",
+    "rangeData": {
+      "City - Cold Weather *": "195 km",
+      "Highway - Cold Weather *": "130 km",
+      "Combined - Cold Weather *": "160 km",
+      "City - Mild Weather *": "275 km",
+      "Highway - Mild Weather *": "160 km",
+      "Combined - Mild Weather *": "205 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "12.1 sec",
+      "Top Speed": "130 km/h",
+      "Electric Range *": "185 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "260 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "50.0 kWh",
+      "Battery Useable*": "45.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "7.4 kW AC",
+      "Charge Time (0->185 km)": "7h15m",
+      "Charge Speed": "26 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "99 kW DC",
+      "Fastcharge Time (19->148 km)": "31 min",
+      "Fastcharge Speed": "250 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "185 km",
+      "Vehicle Consumption *": "243 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.7 l/100km",
+      "Range": "221 km",
+      "Rated Consumption": "252 Wh/km",
+      "Vehicle Consumption": "204 Wh/km",
+      "Rated Fuel Equivalent": "2.8 l/100km",
+      "Vehicle Fuel Equivalent": "2.3 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "231 Wh/km",
+      "Highway - Cold Weather *": "346 Wh/km",
+      "Combined - Cold Weather *": "281 Wh/km",
+      "City - Mild Weather *": "164 Wh/km",
+      "Highway - Mild Weather *": "281 Wh/km",
+      "Combined - Mild Weather *": "220 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4956 mm",
+      "Width": "1920 mm",
+      "Width with mirrors": "2204 mm",
+      "Height": "1890 mm",
+      "Wheelbase": "3275 mm",
+      "Weight Unladen (EU)": "1969 kg",
+      "Gross Vehicle Weight (GVWR)": "2950 kg",
+      "Max. Payload": "1056 kg",
+      "Cargo Volume": "507 L",
+      "Cargo Volume Max": "3061 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "100 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1000 kg",
+      "Vertical Load Max": "60 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "9 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "11.5 m",
+      "Platform": "PSA EMP2",
+      "Car Body": "Small Passenger Van",
+      "Segment": "N - Commercial",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2020-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Citroen e-SpaceTourer XS 50 kWh",
+    "rangeData": {
+      "City - Cold Weather *": "195 km",
+      "Highway - Cold Weather *": "130 km",
+      "Combined - Cold Weather *": "160 km",
+      "City - Mild Weather *": "275 km",
+      "Highway - Mild Weather *": "160 km",
+      "Combined - Mild Weather *": "205 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "12.1 sec",
+      "Top Speed": "130 km/h",
+      "Electric Range *": "185 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "260 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "50.0 kWh",
+      "Battery Useable*": "45.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "7.4 kW AC",
+      "Charge Time (0->185 km)": "7h15m",
+      "Charge Speed": "26 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "99 kW DC",
+      "Fastcharge Time (19->148 km)": "31 min",
+      "Fastcharge Speed": "250 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "185 km",
+      "Vehicle Consumption *": "243 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.7 l/100km",
+      "Range": "230 km",
+      "Rated Consumption": "248 Wh/km",
+      "Vehicle Consumption": "196 Wh/km",
+      "Rated Fuel Equivalent": "2.8 l/100km",
+      "Vehicle Fuel Equivalent": "2.2 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "231 Wh/km",
+      "Highway - Cold Weather *": "346 Wh/km",
+      "Combined - Cold Weather *": "281 Wh/km",
+      "City - Mild Weather *": "164 Wh/km",
+      "Highway - Mild Weather *": "281 Wh/km",
+      "Combined - Mild Weather *": "220 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4606 mm",
+      "Width": "1920 mm",
+      "Width with mirrors": "2204 mm",
+      "Height": "1905 mm",
+      "Wheelbase": "2925 mm",
+      "Weight Unladen (EU)": "1932 kg",
+      "Gross Vehicle Weight (GVWR)": "2855 kg",
+      "Max. Payload": "998 kg",
+      "Cargo Volume": "140 L",
+      "Cargo Volume Max": "2625 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "100 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1000 kg",
+      "Vertical Load Max": "60 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "9 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "10.9 m",
+      "Platform": "PSA EMP2",
+      "Car Body": "Small Passenger Van",
+      "Segment": "N - Commercial",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2020-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Kia e-Niro 39 kWh",
+    "rangeData": {
+      "City - Cold Weather": "230 km",
+      "Highway - Cold Weather": "165 km",
+      "Combined - Cold Weather": "200 km",
+      "City - Mild Weather": "355 km",
+      "Highway - Mild Weather": "215 km",
+      "Combined - Mild Weather": "270 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "9.8 sec",
+      "Top Speed": "155 km/h",
+      "Electric Range": "235 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "395 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "42.0 kWh",
+      "Battery Useable": "39.2 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Front - Middle",
+      "Charge Power": "7.2 kW AC",
+      "Charge Time (0->235 km)": "6h30m",
+      "Charge Speed": "37 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Front - Middle",
+      "Fastcharge Power (max)": "50  kW DC",
+      "Fastcharge Time (24->188 km)": "43 min",
+      "Fastcharge Speed": "230 km/h"
+    },
+    "efficiencyData": {
+      "Range": "289 km",
+      "Vehicle Consumption": "136 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "1.9 l/100km",
+      "Rated Consumption": "153 Wh/km",
+      "Rated Fuel Equivalent": "1.7 l/100km",
+      "Vehicle Fuel Equivalent": "1.5 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "170 Wh/km",
+      "Highway - Cold Weather": "238 Wh/km",
+      "Combined - Cold Weather": "196 Wh/km",
+      "City - Mild Weather": "110 Wh/km",
+      "Highway - Mild Weather": "182 Wh/km",
+      "Combined - Mild Weather": "145 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4375 mm",
+      "Width": "1805 mm",
+      "Width with mirrors": "No Data",
+      "Height": "1570 mm",
+      "Wheelbase": "2700 mm",
+      "Weight Unladen (EU)": "1667 kg",
+      "Gross Vehicle Weight (GVWR)": "2080 kg",
+      "Max. Payload": "488 kg",
+      "Cargo Volume": "451 L",
+      "Cargo Volume Max": "1405 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "100 kg",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "10.6 m",
+      "Platform": "No Data",
+      "Car Body": "SUV",
+      "Segment": "JC - Medium",
+      "Roof Rails": "Yes",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2020-11-30T23:00:00.000Z"
+  }
+]

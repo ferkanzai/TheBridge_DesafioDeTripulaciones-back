@@ -1,0 +1,728 @@
+[
+  {
+    "carName": "Tesla Model X Plaid",
+    "rangeData": {
+      "City - Cold Weather *": "445 km",
+      "Highway - Cold Weather *": "330 km",
+      "Combined - Cold Weather *": "385 km",
+      "City - Mild Weather *": "650 km",
+      "Highway - Mild Weather *": "420 km",
+      "Combined - Mild Weather *": "515 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "2.6 sec",
+      "Top Speed": "262 km/h",
+      "Electric Range *": "455 km",
+      "Total Power": "760 kW (1033 PS)",
+      "Total Torque": "No Data",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "95.0 kWh",
+      "Battery Useable*": "90.0 kWh",
+      "Charge Port *": "Type 2",
+      "Port Location": "Left Side - Rear",
+      "Charge Power *": "16.5 kW AC",
+      "Charge Time (0->455 km) *": "6h30m",
+      "Charge Speed *": "71 km/h",
+      "Fastcharge Port *": "Supercharger",
+      "FC Port Location": "Left Side - Rear",
+      "Fastcharge Power (max) *": "250 kW DC",
+      "Fastcharge Time (46->364 km) *": "23 min",
+      "Fastcharge Speed *": "830 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "547 km",
+      "Vehicle Consumption *": "165 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.2 l/100km",
+      "Rated Consumption *": "No Data",
+      "Rated Fuel Equivalent *": "No Data",
+      "Vehicle Fuel Equivalent *": "1.8 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "202 Wh/km",
+      "Highway - Cold Weather *": "273 Wh/km",
+      "Combined - Cold Weather *": "234 Wh/km",
+      "City - Mild Weather *": "138 Wh/km",
+      "Highway - Mild Weather *": "214 Wh/km",
+      "Combined - Mild Weather *": "175 Wh/km"
+    },
+    "dimensionsData": {
+      "Length *": "5036 mm",
+      "Width *": "1999 mm",
+      "Width with mirrors *": "No Data",
+      "Height *": "1684 mm",
+      "Wheelbase *": "2965 mm",
+      "Weight Unladen (EU)": "2455 kg",
+      "Gross Vehicle Weight (GVWR)": "No Data",
+      "Max. Payload": "No Data",
+      "Cargo Volume": "No Data",
+      "Cargo Volume Max": "2577 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "No Data",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "No Data",
+      "Towing Weight Braked": "No Data",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "7 people",
+      "Isofix": "No Data",
+      "Turning Circle": "No Data",
+      "Platform": "TESLA S/X",
+      "Car Body": "SUV",
+      "Segment": "JF - Luxury",
+      "Roof Rails": "No Data",
+      "EV Dedicated Platform": "Yes"
+    },
+    "available": false,
+    "releaseDate": "2021-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Tesla Model X Long Range",
+    "rangeData": {
+      "City - Cold Weather *": "465 km",
+      "Highway - Cold Weather *": "340 km",
+      "Combined - Cold Weather *": "400 km",
+      "City - Mild Weather *": "685 km",
+      "Highway - Mild Weather *": "435 km",
+      "Combined - Mild Weather *": "540 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "3.9 sec",
+      "Top Speed": "250 km/h",
+      "Electric Range *": "475 km",
+      "Total Power": "500 kW (680 PS)",
+      "Total Torque": "No Data",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "95.0 kWh",
+      "Battery Useable*": "90.0 kWh",
+      "Charge Port *": "Type 2",
+      "Port Location": "Left Side - Rear",
+      "Charge Power *": "16.5 kW AC",
+      "Charge Time (0->475 km) *": "6h30m",
+      "Charge Speed *": "74 km/h",
+      "Fastcharge Port *": "Supercharger",
+      "FC Port Location": "Left Side - Rear",
+      "Fastcharge Power (max) *": "250 kW DC",
+      "Fastcharge Time (48->380 km) *": "23 min",
+      "Fastcharge Speed *": "860 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "580 km",
+      "Vehicle Consumption *": "155 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.1 l/100km",
+      "Rated Consumption *": "No Data",
+      "Rated Fuel Equivalent *": "No Data",
+      "Vehicle Fuel Equivalent *": "1.7 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "194 Wh/km",
+      "Highway - Cold Weather *": "265 Wh/km",
+      "Combined - Cold Weather *": "225 Wh/km",
+      "City - Mild Weather *": "131 Wh/km",
+      "Highway - Mild Weather *": "207 Wh/km",
+      "Combined - Mild Weather *": "167 Wh/km"
+    },
+    "dimensionsData": {
+      "Length *": "5036 mm",
+      "Width *": "1999 mm",
+      "Width with mirrors *": "No Data",
+      "Height *": "1684 mm",
+      "Wheelbase *": "2965 mm",
+      "Weight Unladen (EU)": "2352 kg",
+      "Gross Vehicle Weight (GVWR)": "No Data",
+      "Max. Payload": "No Data",
+      "Cargo Volume": "No Data",
+      "Cargo Volume Max": "2577 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "No Data",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "No Data",
+      "Towing Weight Braked": "No Data",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "7 people",
+      "Isofix": "No Data",
+      "Turning Circle": "No Data",
+      "Platform": "TESLA S/X",
+      "Car Body": "SUV",
+      "Segment": "JF - Luxury",
+      "Roof Rails": "No Data",
+      "EV Dedicated Platform": "Yes"
+    },
+    "available": false,
+    "releaseDate": "2021-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Tesla Model S Plaid+",
+    "rangeData": {
+      "City - Cold Weather *": "630 km",
+      "Highway - Cold Weather *": "490 km",
+      "Combined - Cold Weather *": "560 km",
+      "City - Mild Weather *": "945 km",
+      "Highway - Mild Weather *": "635 km",
+      "Combined - Mild Weather *": "770 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "2.1 sec",
+      "Top Speed": "322 km/h",
+      "Electric Range *": "670 km",
+      "Total Power": "820 kW (1115 PS)",
+      "Total Torque": "No Data",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "120.0 kWh",
+      "Battery Useable*": "115.0 kWh",
+      "Charge Port *": "Type 2",
+      "Port Location": "Left Side - Rear",
+      "Charge Power *": "16.5 kW AC",
+      "Charge Time (0->670 km) *": "8h15m",
+      "Charge Speed *": "82 km/h",
+      "Fastcharge Port *": "Supercharger",
+      "FC Port Location": "Left Side - Rear",
+      "Fastcharge Power (max) *": "250 kW DC",
+      "Fastcharge Time (67->536 km) *": "30 min",
+      "Fastcharge Speed *": "930 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "840 km",
+      "Vehicle Consumption *": "137 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "1.9 l/100km",
+      "Rated Consumption *": "No Data",
+      "Rated Fuel Equivalent *": "No Data",
+      "Vehicle Fuel Equivalent *": "1.5 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "183 Wh/km",
+      "Highway - Cold Weather *": "235 Wh/km",
+      "Combined - Cold Weather *": "205 Wh/km",
+      "City - Mild Weather *": "122 Wh/km",
+      "Highway - Mild Weather *": "181 Wh/km",
+      "Combined - Mild Weather *": "149 Wh/km"
+    },
+    "dimensionsData": {
+      "Length *": "4970 mm",
+      "Width *": "1964 mm",
+      "Width with mirrors *": "No Data",
+      "Height *": "1445 mm",
+      "Wheelbase *": "2960 mm",
+      "Weight Unladen (EU) *": "2250 kg",
+      "Gross Vehicle Weight (GVWR)": "No Data",
+      "Max. Payload": "No Data",
+      "Cargo Volume": "793 L",
+      "Cargo Volume Max": "No Data",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "No Data",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "No Data",
+      "Towing Weight Braked": "No Data",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "No Data",
+      "Turning Circle": "No Data",
+      "Platform": "TESLA S/X",
+      "Car Body": "Liftback Sedan",
+      "Segment": "F - Luxury",
+      "Roof Rails": "No Data",
+      "EV Dedicated Platform": "Yes"
+    },
+    "available": false,
+    "releaseDate": "2021-11-30T23:00:00.000Z"
+  },
+  {
+    "carName": "Tesla Model S Plaid",
+    "rangeData": {
+      "City - Cold Weather *": "500 km",
+      "Highway - Cold Weather *": "390 km",
+      "Combined - Cold Weather *": "445 km",
+      "City - Mild Weather *": "755 km",
+      "Highway - Mild Weather *": "505 km",
+      "Combined - Mild Weather *": "615 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "2.1 sec",
+      "Top Speed": "322 km/h",
+      "Electric Range *": "535 km",
+      "Total Power": "760 kW (1033 PS)",
+      "Total Torque": "No Data",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "95.0 kWh",
+      "Battery Useable*": "90.0 kWh",
+      "Charge Port *": "Type 2",
+      "Port Location": "Left Side - Rear",
+      "Charge Power *": "16.5 kW AC",
+      "Charge Time (0->535 km) *": "6h30m",
+      "Charge Speed *": "83 km/h",
+      "Fastcharge Port *": "Supercharger",
+      "FC Port Location": "Left Side - Rear",
+      "Fastcharge Power (max) *": "250 kW DC",
+      "Fastcharge Time (54->428 km) *": "23 min",
+      "Fastcharge Speed *": "970 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "628 km",
+      "Vehicle Consumption *": "143 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "1.9 l/100km",
+      "Rated Consumption *": "No Data",
+      "Rated Fuel Equivalent *": "No Data",
+      "Vehicle Fuel Equivalent *": "1.6 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "180 Wh/km",
+      "Highway - Cold Weather *": "231 Wh/km",
+      "Combined - Cold Weather *": "202 Wh/km",
+      "City - Mild Weather *": "119 Wh/km",
+      "Highway - Mild Weather *": "178 Wh/km",
+      "Combined - Mild Weather *": "146 Wh/km"
+    },
+    "dimensionsData": {
+      "Length *": "4970 mm",
+      "Width *": "1964 mm",
+      "Width with mirrors *": "No Data",
+      "Height *": "1445 mm",
+      "Wheelbase *": "2960 mm",
+      "Weight Unladen (EU)": "2162 kg",
+      "Gross Vehicle Weight (GVWR)": "No Data",
+      "Max. Payload": "No Data",
+      "Cargo Volume": "793 L",
+      "Cargo Volume Max": "No Data",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "No Data",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "No Data",
+      "Towing Weight Braked": "No Data",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "No Data",
+      "Turning Circle": "No Data",
+      "Platform": "TESLA S/X",
+      "Car Body": "Liftback Sedan",
+      "Segment": "F - Luxury",
+      "Roof Rails": "No Data",
+      "EV Dedicated Platform": "Yes"
+    },
+    "available": false,
+    "releaseDate": "2021-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Tesla Model S Long Range",
+    "rangeData": {
+      "City - Cold Weather *": "520 km",
+      "Highway - Cold Weather *": "400 km",
+      "Combined - Cold Weather *": "460 km",
+      "City - Mild Weather *": "790 km",
+      "Highway - Mild Weather *": "525 km",
+      "Combined - Mild Weather *": "640 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "3.2 sec",
+      "Top Speed": "250 km/h",
+      "Electric Range *": "555 km",
+      "Total Power": "500 kW (680 PS)",
+      "Total Torque": "No Data",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "95.0 kWh",
+      "Battery Useable*": "90.0 kWh",
+      "Charge Port *": "Type 2",
+      "Port Location": "Left Side - Rear",
+      "Charge Power *": "16.5 kW AC",
+      "Charge Time (0->555 km) *": "6h30m",
+      "Charge Speed *": "86 km/h",
+      "Fastcharge Port *": "Supercharger",
+      "FC Port Location": "Left Side - Rear",
+      "Fastcharge Power (max) *": "250 kW DC",
+      "Fastcharge Time (56->444 km) *": "23 min",
+      "Fastcharge Speed *": "1010 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "663 km",
+      "Vehicle Consumption *": "136 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "1.8 l/100km",
+      "Rated Consumption *": "No Data",
+      "Rated Fuel Equivalent *": "No Data",
+      "Vehicle Fuel Equivalent *": "1.5 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "173 Wh/km",
+      "Highway - Cold Weather *": "225 Wh/km",
+      "Combined - Cold Weather *": "196 Wh/km",
+      "City - Mild Weather *": "114 Wh/km",
+      "Highway - Mild Weather *": "171 Wh/km",
+      "Combined - Mild Weather *": "141 Wh/km"
+    },
+    "dimensionsData": {
+      "Length *": "4970 mm",
+      "Width *": "1964 mm",
+      "Width with mirrors *": "No Data",
+      "Height *": "1445 mm",
+      "Wheelbase *": "2960 mm",
+      "Weight Unladen (EU)": "2069 kg",
+      "Gross Vehicle Weight (GVWR)": "No Data",
+      "Max. Payload": "No Data",
+      "Cargo Volume": "793 L",
+      "Cargo Volume Max": "No Data",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "No Data",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "No Data",
+      "Towing Weight Braked": "No Data",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "No Data",
+      "Turning Circle": "No Data",
+      "Platform": "TESLA S/X",
+      "Car Body": "Liftback Sedan",
+      "Segment": "F - Luxury",
+      "Roof Rails": "No Data",
+      "EV Dedicated Platform": "Yes"
+    },
+    "available": false,
+    "releaseDate": "2021-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Porsche Taycan Plus",
+    "rangeData": {
+      "City - Cold Weather": "435 km",
+      "Highway - Cold Weather": "335 km",
+      "Combined - Cold Weather": "385 km",
+      "City - Mild Weather": "645 km",
+      "Highway - Mild Weather": "430 km",
+      "Combined - Mild Weather": "525 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "5.4 sec",
+      "Top Speed": "230 km/h",
+      "Electric Range": "460 km",
+      "Total Power": "350 kW (476 PS)",
+      "Total Torque": "357 Nm",
+      "Drive": "Rear"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "93.4 kWh",
+      "Battery Useable": "83.7 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Right Side - Front",
+      "Port Location 2": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->460 km)": "9 hours",
+      "Charge Speed": "51 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Right Side - Front",
+      "FC Port Location 2": "-",
+      "Fastcharge Power (max)": "262 kW DC",
+      "Fastcharge Time (46->368 km)": "20 min",
+      "Fastcharge Speed": "960 km/h"
+    },
+    "efficiencyData": {
+      "Range": "407 km",
+      "Vehicle Consumption": "206 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "2.0 l/100km",
+      "Rated Consumption": "254 Wh/km",
+      "Rated Fuel Equivalent": "2.9 l/100km",
+      "Vehicle Fuel Equivalent": "2.3 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "192 Wh/km",
+      "Highway - Cold Weather": "250 Wh/km",
+      "Combined - Cold Weather": "217 Wh/km",
+      "City - Mild Weather": "130 Wh/km",
+      "Highway - Mild Weather": "195 Wh/km",
+      "Combined - Mild Weather": "159 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4963 mm",
+      "Width": "1966 mm",
+      "Width with mirrors": "2144 mm",
+      "Height": "1394 mm",
+      "Wheelbase": "2900 mm",
+      "Weight Unladen (EU)": "2205 kg",
+      "Gross Vehicle Weight (GVWR)": "2795 kg",
+      "Max. Payload": "665 kg",
+      "Cargo Volume": "407 L",
+      "Cargo Volume Max": "No Data",
+      "Cargo Volume Frunk": "84 L",
+      "Roof Load": "75 kg",
+      "Tow Hitch Possible": "No",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "0 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "4 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "11.7 m",
+      "Platform": "VW J1",
+      "Car Body": "Sedan",
+      "Segment": "F - Luxury",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "Yes"
+    },
+    "available": true,
+    "releaseDate": "2021-01-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Porsche Taycan",
+    "rangeData": {
+      "City - Cold Weather": "375 km",
+      "Highway - Cold Weather": "290 km",
+      "Combined - Cold Weather": "330 km",
+      "City - Mild Weather": "560 km",
+      "Highway - Mild Weather": "370 km",
+      "Combined - Mild Weather": "455 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "5.4 sec",
+      "Top Speed": "230 km/h",
+      "Electric Range": "395 km",
+      "Total Power": "300 kW (408 PS)",
+      "Total Torque": "345 Nm",
+      "Drive": "Rear"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "79.2 kWh",
+      "Battery Useable": "71.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Right Side - Front",
+      "Port Location 2": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->395 km)": "7h45m",
+      "Charge Speed": "52 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Right Side - Front",
+      "FC Port Location 2": "-",
+      "Fastcharge Power (max)": "225 kW DC",
+      "Fastcharge Time (40->316 km)": "21 min",
+      "Fastcharge Speed": "790 km/h"
+    },
+    "efficiencyData": {
+      "Range": "354 km",
+      "Vehicle Consumption": "201 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "2.0 l/100km",
+      "Rated Consumption": "248 Wh/km",
+      "Rated Fuel Equivalent": "2.8 l/100km",
+      "Vehicle Fuel Equivalent": "2.3 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "189 Wh/km",
+      "Highway - Cold Weather": "245 Wh/km",
+      "Combined - Cold Weather": "215 Wh/km",
+      "City - Mild Weather": "127 Wh/km",
+      "Highway - Mild Weather": "192 Wh/km",
+      "Combined - Mild Weather": "156 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4963 mm",
+      "Width": "1966 mm",
+      "Width with mirrors": "2144 mm",
+      "Height": "1395 mm",
+      "Wheelbase": "2900 mm",
+      "Weight Unladen (EU)": "2125 kg",
+      "Gross Vehicle Weight (GVWR)": "2795 kg",
+      "Max. Payload": "745 kg",
+      "Cargo Volume": "407 L",
+      "Cargo Volume Max": "No Data",
+      "Cargo Volume Frunk": "84 L",
+      "Roof Load": "75 kg",
+      "Tow Hitch Possible": "No",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "0 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "4 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "11.7 m",
+      "Platform": "VW J1",
+      "Car Body": "Sedan",
+      "Segment": "F - Luxury",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "Yes"
+    },
+    "available": true,
+    "releaseDate": "2021-01-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Hyundai IONIQ 5 Project 45",
+    "rangeData": {
+      "City - Cold Weather *": "370 km",
+      "Highway - Cold Weather *": "270 km",
+      "Combined - Cold Weather *": "320 km",
+      "City - Mild Weather *": "540 km",
+      "Highway - Mild Weather *": "345 km",
+      "Combined - Mild Weather *": "430 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "5.2 sec",
+      "Top Speed": "185 km/h",
+      "Electric Range *": "375 km",
+      "Total Power": "225 kW (306 PS)",
+      "Total Torque": "605 Nm",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "72.6 kWh",
+      "Battery Useable*": "72.6 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Right Side - Rear",
+      "Charge Power *": "11 kW AC",
+      "Charge Time (0->375 km) *": "7h45m",
+      "Charge Speed *": "48 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Right Side - Rear",
+      "Fastcharge Power (max)": "232 kW DC",
+      "Fastcharge Time (38->300 km)": "18 min",
+      "Fastcharge Speed": "870 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "430 km",
+      "Vehicle Consumption *": "169 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.2 l/100km",
+      "Rated Consumption *": "190 Wh/km",
+      "Rated Fuel Equivalent *": "2.1 l/100km",
+      "Vehicle Fuel Equivalent *": "1.9 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "196 Wh/km",
+      "Highway - Cold Weather *": "269 Wh/km",
+      "Combined - Cold Weather *": "227 Wh/km",
+      "City - Mild Weather *": "134 Wh/km",
+      "Highway - Mild Weather *": "210 Wh/km",
+      "Combined - Mild Weather *": "169 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4635 mm",
+      "Width": "1890 mm",
+      "Width with mirrors": "2152 mm",
+      "Height": "1605 mm",
+      "Wheelbase": "3000 mm",
+      "Weight Unladen (EU) *": "2175 kg",
+      "Gross Vehicle Weight (GVWR)": "2540 kg",
+      "Max. Payload": "No Data",
+      "Cargo Volume": "531 L",
+      "Cargo Volume Max": "1591 L",
+      "Cargo Volume Frunk": "24 L",
+      "Roof Load": "80 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1600 kg",
+      "Vertical Load Max": "100 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "12 m",
+      "Platform": "HMG E-GMP",
+      "Car Body": "SUV",
+      "Segment": "JC - Medium",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "Yes"
+    },
+    "available": false,
+    "releaseDate": "2021-06-30T22:00:00.000Z"
+  },
+  {
+    "carName": "Seres 3",
+    "rangeData": {
+      "City - Cold Weather *": "275 km",
+      "Highway - Cold Weather *": "190 km",
+      "Combined - Cold Weather *": "230 km",
+      "City - Mild Weather *": "405 km",
+      "Highway - Mild Weather *": "240 km",
+      "Combined - Mild Weather *": "305 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "8.9 sec",
+      "Top Speed": "155 km/h",
+      "Electric Range *": "270 km",
+      "Total Power": "120 kW (163 PS)",
+      "Total Torque": "300 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "52.0 kWh",
+      "Battery Useable*": "52.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Right Side - Rear",
+      "Charge Power": "6.6 kW AC",
+      "Charge Time (0->270 km)": "9h30m",
+      "Charge Speed": "29 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Right Side - Rear",
+      "Fastcharge Power (max)": "92  kW DC",
+      "Fastcharge Time (27->216 km)": "29 min",
+      "Fastcharge Speed": "390 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "270 km",
+      "Vehicle Consumption *": "193 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.2 l/100km",
+      "Range": "329 km",
+      "Rated Consumption": "180 Wh/km",
+      "Vehicle Consumption": "158 Wh/km",
+      "Rated Fuel Equivalent": "2.0 l/100km",
+      "Vehicle Fuel Equivalent": "1.8 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "189 Wh/km",
+      "Highway - Cold Weather *": "274 Wh/km",
+      "Combined - Cold Weather *": "226 Wh/km",
+      "City - Mild Weather *": "128 Wh/km",
+      "Highway - Mild Weather *": "217 Wh/km",
+      "Combined - Mild Weather *": "170 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4385 mm",
+      "Width": "1850 mm",
+      "Width with mirrors": "No Data",
+      "Height": "1650 mm",
+      "Wheelbase": "2655 mm",
+      "Weight Unladen (EU)": "1650 kg",
+      "Gross Vehicle Weight (GVWR)": "2065 kg",
+      "Max. Payload": "490 kg",
+      "Cargo Volume": "526 L",
+      "Cargo Volume Max": "No Data",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "No Data",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "No Data",
+      "Platform": "No Data",
+      "Car Body": "SUV",
+      "Segment": "JC - Medium",
+      "Roof Rails": "Yes",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2020-11-30T23:00:00.000Z"
+  }
+]

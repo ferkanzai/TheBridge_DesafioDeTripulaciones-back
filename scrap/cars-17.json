@@ -1,0 +1,730 @@
+[
+  {
+    "carName": "DS 3 Crossback E-Tense",
+    "rangeData": {
+      "City - Cold Weather": "250 km",
+      "Highway - Cold Weather": "175 km",
+      "Combined - Cold Weather": "210 km",
+      "City - Mild Weather": "375 km",
+      "Highway - Mild Weather": "225 km",
+      "Combined - Mild Weather": "285 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "8.7 sec",
+      "Top Speed": "150 km/h",
+      "Electric Range": "250 km",
+      "Total Power": "100 kW (136 PS)",
+      "Total Torque": "260 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "50.0 kWh",
+      "Battery Useable*": "45.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Rear",
+      "Charge Power": "7.4 kW AC",
+      "Charge Time (0->250 km)": "7h15m",
+      "Charge Speed": "35 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Rear",
+      "Fastcharge Power (max)": "99 kW DC",
+      "Fastcharge Time (25->200 km)": "31 min",
+      "Fastcharge Speed": "330 km/h"
+    },
+    "efficiencyData": {
+      "Range": "320 km",
+      "Vehicle Consumption": "141 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "2.0 l/100km",
+      "Rated Consumption": "176 Wh/km",
+      "Rated Fuel Equivalent": "2.0 l/100km",
+      "Vehicle Fuel Equivalent": "1.6 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "180 Wh/km",
+      "Highway - Cold Weather": "257 Wh/km",
+      "Combined - Cold Weather": "214 Wh/km",
+      "City - Mild Weather": "120 Wh/km",
+      "Highway - Mild Weather": "200 Wh/km",
+      "Combined - Mild Weather": "158 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4118 mm",
+      "Width": "1802 mm",
+      "Width with mirrors": "No Data",
+      "Height": "1534 mm",
+      "Wheelbase": "2558 mm",
+      "Weight Unladen (EU)": "1598 kg",
+      "Gross Vehicle Weight (GVWR)": "1975 kg",
+      "Max. Payload": "452 kg",
+      "Cargo Volume": "350 L",
+      "Cargo Volume Max": "1050 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "No Data",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "No Data",
+      "Turning Circle": "No Data",
+      "Platform": "PSA eCMP",
+      "Car Body": "SUV",
+      "Segment": "JB - Small",
+      "Roof Rails": "No Data",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2019-12-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Mercedes EQA 250",
+    "rangeData": {
+      "City - Cold Weather *": "350 km",
+      "Highway - Cold Weather *": "250 km",
+      "Combined - Cold Weather *": "300 km",
+      "City - Mild Weather *": "515 km",
+      "Highway - Mild Weather *": "320 km",
+      "Combined - Mild Weather *": "405 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "8.9 sec",
+      "Top Speed": "160 km/h",
+      "Electric Range *": "355 km",
+      "Total Power": "140 kW (190 PS)",
+      "Total Torque": "375 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "79.8 kWh",
+      "Battery Useable": "66.5 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Right Side - Rear",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->355 km)": "7h15m",
+      "Charge Speed": "50 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Right Side - Rear",
+      "Fastcharge Power (max)": "100 kW DC",
+      "Fastcharge Time (36->284 km)": "35 min",
+      "Fastcharge Speed": "420 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "355 km",
+      "Vehicle Consumption *": "187 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.1 l/100km",
+      "Range": "398 km",
+      "Rated Consumption": "191 Wh/km",
+      "Vehicle Consumption": "167 Wh/km",
+      "Rated Fuel Equivalent": "2.1 l/100km",
+      "Vehicle Fuel Equivalent": "1.9 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "190 Wh/km",
+      "Highway - Cold Weather *": "266 Wh/km",
+      "Combined - Cold Weather *": "222 Wh/km",
+      "City - Mild Weather *": "129 Wh/km",
+      "Highway - Mild Weather *": "208 Wh/km",
+      "Combined - Mild Weather *": "164 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4463 mm",
+      "Width": "1834 mm",
+      "Width with mirrors": "2020 mm",
+      "Height": "1620 mm",
+      "Wheelbase": "2729 mm",
+      "Weight Unladen (EU)": "2040 kg",
+      "Gross Vehicle Weight (GVWR)": "2470 kg",
+      "Max. Payload": "505 kg",
+      "Cargo Volume": "340 L",
+      "Cargo Volume Max": "1320 L",
+      "Cargo Volume Frunk": "0 L",
+      "Roof Load": "No Data",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "750 kg",
+      "Vertical Load Max": "80 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "No Data",
+      "Turning Circle": "11.4 m",
+      "Platform": "DAIMLER MFA2",
+      "Car Body": "SUV",
+      "Segment": "JC - Medium",
+      "Roof Rails": "Yes",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2021-03-31T22:00:00.000Z"
+  },
+  {
+    "carName": "BMW i3 120 Ah",
+    "rangeData": {
+      "City - Cold Weather": "235 km",
+      "Highway - Cold Weather": "165 km",
+      "Combined - Cold Weather": "200 km",
+      "City - Mild Weather": "360 km",
+      "Highway - Mild Weather": "215 km",
+      "Combined - Mild Weather": "275 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "7.3 sec",
+      "Top Speed": "150 km/h",
+      "Electric Range": "235 km",
+      "Total Power": "125 kW (170 PS)",
+      "Total Torque": "250 Nm",
+      "Drive": "Rear"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "42.2 kWh",
+      "Battery Useable": "37.9 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Right Side - Rear",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->235 km)": "4h15m",
+      "Charge Speed": "58 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Right Side - Rear",
+      "Fastcharge Power (max)": "49 kW DC",
+      "Fastcharge Time (24->188 km)": "36 min",
+      "Fastcharge Speed": "270 km/h"
+    },
+    "efficiencyData": {
+      "Range": "308 km",
+      "Vehicle Consumption": "123 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "1.8 l/100km",
+      "Rated Consumption": "153 Wh/km",
+      "Rated Fuel Equivalent": "1.7 l/100km",
+      "Vehicle Fuel Equivalent": "1.4 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "161 Wh/km",
+      "Highway - Cold Weather": "230 Wh/km",
+      "Combined - Cold Weather": "190 Wh/km",
+      "City - Mild Weather": "105 Wh/km",
+      "Highway - Mild Weather": "176 Wh/km",
+      "Combined - Mild Weather": "138 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4011 mm",
+      "Width": "1775 mm",
+      "Width with mirrors": "No Data",
+      "Height": "1598 mm",
+      "Wheelbase": "2570 mm",
+      "Weight Unladen (EU)": "1345 kg",
+      "Gross Vehicle Weight (GVWR)": "1710 kg",
+      "Max. Payload": "440 kg",
+      "Cargo Volume": "260 L",
+      "Cargo Volume Max": "1100 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "0 kg",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "4 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "9.9 m",
+      "Platform": "No Data",
+      "Car Body": "Hatchback",
+      "Segment": "B - Small",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2018-09-30T22:00:00.000Z"
+  },
+  {
+    "carName": "Nissan Leaf e+",
+    "rangeData": {
+      "City - Cold Weather": "320 km",
+      "Highway - Cold Weather": "230 km",
+      "Combined - Cold Weather": "275 km",
+      "City - Mild Weather": "485 km",
+      "Highway - Mild Weather": "300 km",
+      "Combined - Mild Weather": "375 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "7.3 sec",
+      "Top Speed": "157 km/h",
+      "Electric Range": "325 km",
+      "Total Power": "160 kW (218 PS)",
+      "Total Torque": "340 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "62.0 kWh",
+      "Battery Useable*": "56.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Front - Middle",
+      "Charge Power": "6.6 kW AC",
+      "Charge Time (0->325 km)": "10 hours",
+      "Charge Speed": "33 km/h",
+      "Fastcharge Port": "CHAdeMO",
+      "FC Port Location": "Front - Middle",
+      "Fastcharge Power (max)": "100 kW DC",
+      "Fastcharge Time (33->260 km)": "35 min",
+      "Fastcharge Speed": "390 km/h"
+    },
+    "efficiencyData": {
+      "Range": "385 km",
+      "Vehicle Consumption": "145 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "1.9 l/100km",
+      "Rated Consumption": "180 Wh/km",
+      "Rated Fuel Equivalent": "2.0 l/100km",
+      "Vehicle Fuel Equivalent": "1.6 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "175 Wh/km",
+      "Highway - Cold Weather": "243 Wh/km",
+      "Combined - Cold Weather": "204 Wh/km",
+      "City - Mild Weather": "115 Wh/km",
+      "Highway - Mild Weather": "187 Wh/km",
+      "Combined - Mild Weather": "149 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4490 mm",
+      "Width": "1788 mm",
+      "Width with mirrors": "No Data",
+      "Height": "1545 mm",
+      "Wheelbase": "2700 mm",
+      "Weight Unladen (EU)": "1756 kg",
+      "Gross Vehicle Weight (GVWR)": "2140 kg",
+      "Max. Payload": "459 kg",
+      "Cargo Volume": "420 L",
+      "Cargo Volume Max": "1161 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "35 kg",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "10.6 m",
+      "Platform": "No Data",
+      "Car Body": "Hatchback",
+      "Segment": "C - Medium",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2019-05-31T22:00:00.000Z"
+  },
+  {
+    "carName": "BMW iX3",
+    "rangeData": {
+      "City - Cold Weather *": "360 km",
+      "Highway - Cold Weather *": "255 km",
+      "Combined - Cold Weather *": "305 km",
+      "City - Mild Weather *": "525 km",
+      "Highway - Mild Weather *": "325 km",
+      "Combined - Mild Weather *": "410 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "6.8 sec",
+      "Top Speed": "180 km/h",
+      "Electric Range *": "360 km",
+      "Total Power": "210 kW (286 PS)",
+      "Total Torque": "400 Nm",
+      "Drive": "Rear"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "80.0 kWh",
+      "Battery Useable": "74.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Right Side - Rear",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->360 km)": "8 hours",
+      "Charge Speed": "45 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Right Side - Rear",
+      "Fastcharge Power (max)": "155 kW DC",
+      "Fastcharge Time (36->288 km)": "31 min",
+      "Fastcharge Speed": "480 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "360 km",
+      "Vehicle Consumption *": "206 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "2.3 l/100km",
+      "Range": "460 km",
+      "Rated Consumption": "185 Wh/km",
+      "Vehicle Consumption": "161 Wh/km",
+      "Rated Fuel Equivalent": "2.1 l/100km",
+      "Vehicle Fuel Equivalent": "1.8 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "206 Wh/km",
+      "Highway - Cold Weather *": "290 Wh/km",
+      "Combined - Cold Weather *": "243 Wh/km",
+      "City - Mild Weather *": "141 Wh/km",
+      "Highway - Mild Weather *": "228 Wh/km",
+      "Combined - Mild Weather *": "180 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4734 mm",
+      "Width": "1891 mm",
+      "Width with mirrors": "No Data",
+      "Height": "1668 mm",
+      "Wheelbase": "2864 mm",
+      "Weight Unladen (EU)": "2260 kg",
+      "Gross Vehicle Weight (GVWR)": "2725 kg",
+      "Max. Payload": "540 kg",
+      "Cargo Volume": "510 L",
+      "Cargo Volume Max": "1560 L",
+      "Cargo Volume Frunk": "0 L",
+      "Roof Load": "100 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "750 kg",
+      "Vertical Load Max": "75 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "No Data",
+      "Turning Circle": "12.1 m",
+      "Platform": "No Data",
+      "Car Body": "SUV",
+      "Segment": "JD - Large",
+      "Roof Rails": "Yes",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2020-10-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Volkswagen ID.3 Pure Performance",
+    "rangeData": {
+      "City - Cold Weather *": "270 km",
+      "Highway - Cold Weather *": "195 km",
+      "Combined - Cold Weather *": "230 km",
+      "City - Mild Weather *": "410 km",
+      "Highway - Mild Weather *": "255 km",
+      "Combined - Mild Weather *": "320 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "8.9 sec",
+      "Top Speed": "160 km/h",
+      "Electric Range *": "275 km",
+      "Total Power": "110 kW (150 PS)",
+      "Total Torque": "310 Nm",
+      "Drive": "Rear"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t*": "48.0 kWh",
+      "Battery Useable": "45.0 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Right Side - Rear",
+      "Charge Power": "7.2 kW AC",
+      "Charge Time (0->275 km)": "7h30m",
+      "Charge Speed": "38 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Right Side - Rear",
+      "Fastcharge Power (max)": "50  kW DC",
+      "Fastcharge Time (28->220 km)": "44 min",
+      "Fastcharge Speed": "260 km/h"
+    },
+    "efficiencyData": {
+      "Range *": "275 km",
+      "Vehicle Consumption *": "164 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent * ": "1.8 l/100km",
+      "Range": "346 km",
+      "Rated Consumption": "151 Wh/km",
+      "Vehicle Consumption": "130 Wh/km",
+      "Rated Fuel Equivalent": "1.7 l/100km",
+      "Vehicle Fuel Equivalent": "1.5 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather *": "167 Wh/km",
+      "Highway - Cold Weather *": "231 Wh/km",
+      "Combined - Cold Weather *": "196 Wh/km",
+      "City - Mild Weather *": "110 Wh/km",
+      "Highway - Mild Weather *": "176 Wh/km",
+      "Combined - Mild Weather *": "141 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4261 mm",
+      "Width": "1809 mm",
+      "Width with mirrors": "2070 mm",
+      "Height": "1568 mm",
+      "Wheelbase": "2771 mm",
+      "Weight Unladen (EU)": "1725 kg",
+      "Gross Vehicle Weight (GVWR)": "2240 kg",
+      "Max. Payload": "590 kg",
+      "Cargo Volume": "385 L",
+      "Cargo Volume Max": "1267 L",
+      "Cargo Volume Frunk": "0 L",
+      "Roof Load": "0 kg",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "10.2 m",
+      "Platform": "VW MEB",
+      "Car Body": "Hatchback",
+      "Segment": "C - Medium",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "Yes"
+    },
+    "available": true,
+    "releaseDate": "2021-01-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Nissan e-NV200 Evalia",
+    "rangeData": {
+      "City - Cold Weather": "195 km",
+      "Highway - Cold Weather": "130 km",
+      "Combined - Cold Weather": "160 km",
+      "City - Mild Weather": "285 km",
+      "Highway - Mild Weather": "165 km",
+      "Combined - Mild Weather": "215 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "14.0 sec",
+      "Top Speed": "123 km/h",
+      "Electric Range": "190 km",
+      "Total Power": "80 kW (109 PS)",
+      "Total Torque": "254 Nm",
+      "Drive": "Front"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "40.0 kWh",
+      "Battery Useable*": "38.0 kWh",
+      "Charge Port": "Type 1",
+      "Port Location": "Front - Middle",
+      "Charge Power": "6.6 kW AC",
+      "Charge Time (0->190 km)": "7 hours",
+      "Charge Speed": "28 km/h",
+      "Fastcharge Port": "CHAdeMO",
+      "FC Port Location": "Front - Middle",
+      "Fastcharge Power (max)": "46 kW DC",
+      "Fastcharge Time (19->152 km)": "42 min",
+      "Fastcharge Speed": "190 km/h"
+    },
+    "efficiencyData": {
+      "Range": "200 km",
+      "Vehicle Consumption": "190 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "2.2 l/100km",
+      "Rated Consumption": "259 Wh/km",
+      "Rated Fuel Equivalent": "2.9 l/100km",
+      "Vehicle Fuel Equivalent": "2.1 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "195 Wh/km",
+      "Highway - Cold Weather": "292 Wh/km",
+      "Combined - Cold Weather": "238 Wh/km",
+      "City - Mild Weather": "133 Wh/km",
+      "Highway - Mild Weather": "230 Wh/km",
+      "Combined - Mild Weather": "177 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4560 mm",
+      "Width": "1755 mm",
+      "Width with mirrors": "No Data",
+      "Height": "1858 mm",
+      "Wheelbase": "2725 mm",
+      "Weight Unladen (EU)": "1667 kg",
+      "Gross Vehicle Weight (GVWR)": "2250 kg",
+      "Max. Payload": "658 kg",
+      "Cargo Volume": "2000 L",
+      "Cargo Volume Max": "3000 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "100 kg",
+      "Tow Hitch Possible": "No Data",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "No Data"
+    },
+    "miscellaneousData": {
+      "Seats ": "7 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "10.6 m",
+      "Platform": "No Data",
+      "Car Body": "Small Passenger Van",
+      "Segment": "N - Commercial",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "No Data"
+    },
+    "available": true,
+    "releaseDate": "2018-03-31T22:00:00.000Z"
+  },
+  {
+    "carName": "Porsche Taycan Turbo S",
+    "rangeData": {
+      "City - Cold Weather": "385 km",
+      "Highway - Cold Weather": "285 km",
+      "Combined - Cold Weather": "335 km",
+      "City - Mild Weather": "550 km",
+      "Highway - Mild Weather": "365 km",
+      "Combined - Mild Weather": "445 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "2.8 sec",
+      "Top Speed": "260 km/h",
+      "Electric Range": "390 km",
+      "Total Power": "560 kW (761 PS)",
+      "Total Torque": "1050 Nm",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "93.4 kWh",
+      "Battery Useable": "83.7 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Right Side - Front",
+      "Port Location 2": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->390 km)": "9 hours",
+      "Charge Speed": "44 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Right Side - Front",
+      "FC Port Location 2": "-",
+      "Fastcharge Power (max)": "262 kW DC",
+      "Fastcharge Time (39->312 km)": "20 min",
+      "Fastcharge Speed": "810 km/h"
+    },
+    "efficiencyData": {
+      "Range": "390 km",
+      "Vehicle Consumption": "215 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "2.4 l/100km",
+      "Rated Consumption": "256 Wh/km",
+      "Rated Fuel Equivalent": "2.9 l/100km",
+      "Vehicle Fuel Equivalent": "2.4 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "217 Wh/km",
+      "Highway - Cold Weather": "294 Wh/km",
+      "Combined - Cold Weather": "250 Wh/km",
+      "City - Mild Weather": "152 Wh/km",
+      "Highway - Mild Weather": "229 Wh/km",
+      "Combined - Mild Weather": "188 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4963 mm",
+      "Width": "1966 mm",
+      "Width with mirrors": "2144 mm",
+      "Height": "1378 mm",
+      "Wheelbase": "2900 mm",
+      "Weight Unladen (EU)": "2370 kg",
+      "Gross Vehicle Weight (GVWR)": "2870 kg",
+      "Max. Payload": "575 kg",
+      "Cargo Volume": "366 L",
+      "Cargo Volume Max": "No Data",
+      "Cargo Volume Frunk": "84 L",
+      "Roof Load": "75 kg",
+      "Tow Hitch Possible": "No",
+      "Towing Weight Unbraked": "0 kg",
+      "Towing Weight Braked": "0 kg",
+      "Vertical Load Max": "0 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "4 people",
+      "Isofix": "Yes, 2 seats",
+      "Turning Circle": "11.2 m",
+      "Platform": "VW J1",
+      "Car Body": "Sedan",
+      "Segment": "F - Luxury",
+      "Roof Rails": "No",
+      "EV Dedicated Platform": "Yes"
+    },
+    "available": true,
+    "releaseDate": "2019-12-31T23:00:00.000Z"
+  },
+  {
+    "carName": "Audi e-tron Sportback 55 quattro",
+    "rangeData": {
+      "City - Cold Weather": "375 km",
+      "Highway - Cold Weather": "275 km",
+      "Combined - Cold Weather": "320 km",
+      "City - Mild Weather": "530 km",
+      "Highway - Mild Weather": "345 km",
+      "Combined - Mild Weather": "425 km"
+    },
+    "performanceData": {
+      "Acceleration 0 - 100 km/h": "5.7 sec",
+      "Top Speed": "200 km/h",
+      "Electric Range": "375 km",
+      "Total Power": "300 kW (408 PS)",
+      "Total Torque": "664 Nm",
+      "Drive": "AWD"
+    },
+    "chargingData": {
+      "Battery Capacity\t\t\t\t\t\t\t": "95.0 kWh",
+      "Battery Useable": "86.5 kWh",
+      "Charge Port": "Type 2",
+      "Port Location": "Left Side - Front",
+      "Charge Power": "11 kW AC",
+      "Charge Time (0->375 km)": "9h15m",
+      "Charge Speed": "41 km/h",
+      "Fastcharge Port": "CCS",
+      "FC Port Location": "Left Side - Front",
+      "Fastcharge Power (max)": "155 kW DC",
+      "Fastcharge Time (38->300 km)": "26 min",
+      "Fastcharge Speed": "600 km/h"
+    },
+    "efficiencyData": {
+      "Range": "446 km",
+      "Vehicle Consumption": "194 Wh/km",
+      "CO2 Emissions": "0 g/km",
+      "Vehicle Fuel Equivalent ": "2.6 l/100km",
+      "Rated Consumption": "219 Wh/km",
+      "Rated Fuel Equivalent": "2.5 l/100km",
+      "Vehicle Fuel Equivalent": "2.2 l/100km"
+    },
+    "realConsumptionData": {
+      "City - Cold Weather": "231 Wh/km",
+      "Highway - Cold Weather": "315 Wh/km",
+      "Combined - Cold Weather": "270 Wh/km",
+      "City - Mild Weather": "163 Wh/km",
+      "Highway - Mild Weather": "251 Wh/km",
+      "Combined - Mild Weather": "204 Wh/km"
+    },
+    "dimensionsData": {
+      "Length": "4901 mm",
+      "Width": "1935 mm",
+      "Width with mirrors": "2189 mm",
+      "Height": "1616 mm",
+      "Wheelbase": "2928 mm",
+      "Weight Unladen (EU)": "2595 kg",
+      "Gross Vehicle Weight (GVWR)": "3170 kg",
+      "Max. Payload": "650 kg",
+      "Cargo Volume": "615 L",
+      "Cargo Volume Max": "1655 L",
+      "Cargo Volume Frunk": "No Data",
+      "Roof Load": "75 kg",
+      "Tow Hitch Possible": "Yes",
+      "Towing Weight Unbraked": "750 kg",
+      "Towing Weight Braked": "1800 kg",
+      "Vertical Load Max": "80 kg"
+    },
+    "miscellaneousData": {
+      "Seats ": "5 people",
+      "Isofix": "Yes, 3 seats",
+      "Turning Circle": "12.2 m",
+      "Platform": "VW MLB",
+      "Car Body": "SUV",
+      "Segment": "JE - Executive",
+      "Roof Rails": "Yes",
+      "EV Dedicated Platform": "No"
+    },
+    "available": true,
+    "releaseDate": "2020-03-31T22:00:00.000Z"
+  }
+]
