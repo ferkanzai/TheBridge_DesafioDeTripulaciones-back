@@ -33,7 +33,7 @@ const getUserByEmail = async (db, email) => {
   }
 };
 
-const insertUser = async (db, user) => {
+const postInsertUser = async (db, user) => {
   try {
     return await db.query(sql`
       INSERT INTO users (
@@ -53,9 +53,32 @@ const insertUser = async (db, user) => {
   }
 };
 
+const postAddUserCar = async (db, userId, carId) => {
+  try {
+    return await db.transaction(async (tx) => {
+      await tx.query(sql`
+        INSERT INTO user_car (
+          user_id, car_id
+        ) VALUES (
+          ${userId}, ${carId}
+        );
+      `);
+
+      return await tx.query(sql`
+        UPDATE users
+        SET has_car = NOT has_car
+        WHERE id = ${userId} AND has_car = false;
+      `);
+    });
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+  }
+};
+
 module.exports = {
   getUserById,
   getUserByUsername,
   getUserByEmail,
-  insertUser,
+  postInsertUser,
+  postAddUserCar,
 };
