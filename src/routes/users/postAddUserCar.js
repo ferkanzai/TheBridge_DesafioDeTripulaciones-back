@@ -2,7 +2,7 @@ const { postAddUserCar } = require("../../queries/users");
 
 module.exports = (db) => async (req, res, next) => {
   const { id } = req.user;
-  const { carId } = req.body;
+  const { carId } = req.params;
 
   try {
     if (!carId) {

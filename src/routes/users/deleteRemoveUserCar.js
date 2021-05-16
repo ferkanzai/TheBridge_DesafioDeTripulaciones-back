@@ -1,11 +1,11 @@
 const { deleteRemoveUserCar } = require("../../queries/users");
 
 module.exports = (db) => async (req, res, next) => {
-  const { userCarId } = req.params;
+  const { carId } = req.params;
   const { id } = req.user;
 
   try {
-    const result = await deleteRemoveUserCar(db, id, userCarId);
+    const result = await deleteRemoveUserCar(db, id, carId);
 
     if (!result) {
       const error = new Error("Trying to delete a row that does not exist");
@@ -18,7 +18,7 @@ module.exports = (db) => async (req, res, next) => {
       success: true,
       data: {
         user_id: id,
-        car_id: userCarId,
+        car_id: carId,
       },
     });
   } catch (error) {
