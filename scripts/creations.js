@@ -207,15 +207,13 @@ const createReservationsUserConnection = async () => {
 
       CREATE OR REPLACE FUNCTION add_expiration_date() RETURNS TRIGGER AS $date$
         BEGIN
-          UPDATE reservations
-          SET expiration_date = CURRENT_TIMESTAMP(2) + INTERVAL '15 minutes'
-          WHERE id = NEW.id;
+          NEW.expiration_date := CURRENT_TIMESTAMP(2) + INTERVAL '15 minutes';
           RETURN NEW;
         END;
       $date$ LANGUAGE plpgsql;
 
       CREATE TRIGGER expiration_date_trigger
-      AFTER INSERT ON reservations
+      BEFORE INSERT ON reservations
       FOR EACH ROW
       EXECUTE PROCEDURE add_expiration_date();
     `);
