@@ -3,7 +3,7 @@ const { sql } = require("slonik");
 const getUserById = async (db, id) => {
   try {
     return await db.query(sql`
-      SELECT email, username FROM users WHERE id = ${id};
+      SELECT id, email, username FROM users WHERE id = ${id};
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -14,7 +14,7 @@ const getUserById = async (db, id) => {
 const getUserByUsername = async (db, username) => {
   try {
     return await db.query(sql`
-      SELECT * FROM users WHERE username = ${username};
+      SELECT username FROM users WHERE username = ${username};
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -25,7 +25,7 @@ const getUserByUsername = async (db, username) => {
 const getUserByEmail = async (db, email) => {
   try {
     return await db.query(sql`
-      SELECT * FROM users WHERE email = ${email};
+      SELECT email FROM users WHERE email = ${email};
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -108,6 +108,31 @@ const deleteRemoveUserCar = async (db, userId, userCarId) => {
   }
 };
 
+const getUserCars = async (db, userId) => {
+  try {
+    return await db.query(sql`
+      SELECT
+        brands.name,
+        cars.model,
+        cars.range,
+        cars.total_power,
+        cars.drive_type,
+        cars.battery_useable,
+        cars.charge_port,
+        cars.fast_charge_port
+      FROM brands JOIN cars ON brands.id = cars.brand_id
+      WHERE cars.id IN (
+        SELECT car_id
+        FROM user_car
+        WHERE user_id = ${userId}
+      );
+    `);
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getUserById,
   getUserByUsername,
@@ -115,4 +140,5 @@ module.exports = {
   postInsertUser,
   postAddUserCar,
   deleteRemoveUserCar,
+  getUserCars,
 };
