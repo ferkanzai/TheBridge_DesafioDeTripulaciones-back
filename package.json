@@ -9,7 +9,8 @@
     "db:create": "node scripts/creations.js",
     "db:insert": "node scripts/insertions.js",
     "db:up": "npm run db:create && npm run db:insert",
-    "db:drop": "node scripts/drops.js"
+    "db:drop": "node scripts/drops.js",
+    "db:restart": "npm run db:drop && npm run db:up"
   },
   "keywords": [],
   "author": "",

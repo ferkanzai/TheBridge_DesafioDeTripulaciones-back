@@ -1,11 +1,17 @@
 const bcrypt = require("bcrypt");
 
 const { generateAccessToken } = require("../../middlewares/authMiddlewares");
-const { getUserByEmail, insertUser } = require("../../queries/users");
+const { getUserByEmail, postInsertUser } = require("../../queries/users");
 
 module.exports = (db) => async (req, res, next) => {
   try {
     const { email, username, password } = req.body;
+
+    if (!email || !username) {
+      const error = new Error("email and username required");
+      error.code = 400;
+      throw error;
+    }
 
     const userExists = (await getUserByEmail(db, email)).rowCount;
 
@@ -18,11 +24,11 @@ module.exports = (db) => async (req, res, next) => {
     const newUser = {
       email,
       password: bcrypt.hashSync(password, 12),
-      username: username || `${email.split("@")[0]} user`,
+      username: username,
       hasCar: false,
     };
 
-    const userFromDb = await insertUser(db, newUser);
+    const userFromDb = await postInsertUser(db, newUser);
 
     const token = generateAccessToken(userFromDb.rows[0]);
 
