@@ -1,16 +1,16 @@
 const { sql } = require("slonik");
 
-const getTest = async (db) => {
+const getReservations = async (db) => {
   try {
     return await db.query(sql`
-      SELECT * FROM test;
+      SELECT * FROM reservations;
     `);
   } catch (error) {
     console.info("> something went wrong: ", error.message);
-    return null;
+    return error;
   }
 };
 
 module.exports = {
-  getTest,
+  getReservations,
 };
