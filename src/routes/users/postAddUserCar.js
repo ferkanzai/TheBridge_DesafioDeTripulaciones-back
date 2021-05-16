@@ -18,12 +18,12 @@ module.exports = (db) => async (req, res, next) => {
       return;
     }
 
+    const { rows, rowCount } = result;
+
     res.status(200).json({
       success: true,
-      data: {
-        user_id: id,
-        car_id: Number(carId),
-      },
+      count: rowCount,
+      data: rows,
     });
   } catch (error) {
     console.info("> something went wrong: ", error.message);

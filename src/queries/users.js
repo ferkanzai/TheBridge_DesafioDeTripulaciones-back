@@ -56,19 +56,21 @@ const postInsertUser = async (db, user) => {
 const postAddUserCar = async (db, userId, carId) => {
   try {
     return await db.transaction(async (tx) => {
-      await tx.query(sql`
+      const newUserCar = await tx.query(sql`
         INSERT INTO user_car (
           user_id, car_id
         ) VALUES (
           ${userId}, ${carId}
-        );
+        ) RETURNING *;
       `);
 
-      return await tx.query(sql`
+      await tx.query(sql`
         UPDATE users
         SET has_car = NOT has_car
         WHERE id = ${userId} AND has_car = false;
       `);
+
+      return newUserCar;
     });
   } catch (error) {
     console.info("> something went wrong:", error.message);

@@ -85,8 +85,27 @@ const createUserCarTable = async () => {
         id SERIAL UNIQUE,
         user_id INTEGER NOT NULL REFERENCES users (id) ON DELETE CASCADE,
         car_id INTEGER NOT NULL REFERENCES cars (id) ON DELETE CASCADE,
-        inserted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(2)
+        inserted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(2),
+        is_primary_car BOOLEAN DEFAULT false
       );
+
+      CREATE OR REPLACE FUNCTION check_if_primary_car() RETURNS TRIGGER AS $primary_car$
+        BEGIN
+          IF (
+            SELECT COUNT(is_primary_car) FROM user_car 
+              WHERE user_id = NEW.user_id AND is_primary_car = true
+              GROUP BY user_id
+            ) IS NULL THEN
+            NEW.is_primary_car := true;
+          END IF;
+          RETURN NEW;
+        END;
+      $primary_car$ LANGUAGE plpgsql;
+
+      CREATE TRIGGER primary_car_trigger
+      BEFORE INSERT ON user_car
+      FOR EACH ROW
+      EXECUTE PROCEDURE check_if_primary_car();
     `);
 
     console.info("> User Car table created");
@@ -199,15 +218,15 @@ const createReservationsUserConnection = async () => {
         id SERIAL UNIQUE,
         user_id INTEGER NOT NULL REFERENCES users (id) ON DELETE CASCADE,
         connection_id INTEGER NOT NULL REFERENCES connections (id) ON DELETE CASCADE,
-        reservation_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(2),
-        expiration_date TIMESTAMP,
-        charge_end_date TIMESTAMP,
+        reservation_date TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT (CURRENT_TIMESTAMP(2) AT TIME ZONE 'utc'),
+        expiration_date TIMESTAMP WITHOUT TIME ZONE,
+        charge_end_date TIMESTAMP WITHOUT TIME ZONE,
         CONSTRAINT reservation_constraint UNIQUE (user_id, connection_id)
       );
 
       CREATE OR REPLACE FUNCTION add_expiration_date() RETURNS TRIGGER AS $date$
         BEGIN
-          NEW.expiration_date := CURRENT_TIMESTAMP(2) + INTERVAL '15 minutes';
+          NEW.expiration_date := (CURRENT_TIMESTAMP(2) AT TIME ZONE 'utc') + INTERVAL '15 minutes';
           RETURN NEW;
         END;
       $date$ LANGUAGE plpgsql;
