@@ -119,12 +119,13 @@ const getUserCars = async (db, userId) => {
         cars.drive_type,
         cars.battery_useable,
         cars.charge_port,
-        cars.fast_charge_port
+        cars.fast_charge_port,
+        user_car.inserted_at
       FROM brands 
         JOIN cars ON brands.id = cars.brand_id 
         JOIN user_car ON cars.id = user_car.car_id
       WHERE user_car.user_id = ${userId}
-      ;
+      ORDER BY user_car.inserted_at;
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
