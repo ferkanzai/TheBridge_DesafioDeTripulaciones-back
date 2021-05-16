@@ -72,6 +72,39 @@ const postAddUserCar = async (db, userId, carId) => {
     });
   } catch (error) {
     console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
+const deleteRemoveUserCar = async (db, userId, userCarId) => {
+  try {
+    return await db.transaction(async (tx) => {
+      const userCars = await tx.query(sql`
+        DELETE FROM user_car
+        WHERE id = ${userCarId}
+        RETURNING (
+          SELECT COUNT(user_id)
+          FROM user_car 
+          WHERE user_id = ${userId}
+        );
+      `);
+
+      const userHasCars = userCars.rows[0].count - 1;
+
+      if (!userHasCars) {
+        await tx.query(sql`
+        UPDATE users
+        SET has_car = NOT has_car
+        WHERE id = ${userId} AND has_car = true;
+        `);
+      }
+
+      if (!userCars.rowCount) return false;
+
+      return true;
+    });
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
   }
 };
 
@@ -81,4 +114,5 @@ module.exports = {
   getUserByEmail,
   postInsertUser,
   postAddUserCar,
+  deleteRemoveUserCar,
 };

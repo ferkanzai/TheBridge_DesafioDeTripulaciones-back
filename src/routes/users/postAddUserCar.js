@@ -13,8 +13,8 @@ module.exports = (db) => async (req, res, next) => {
 
     const result = await postAddUserCar(db, id, carId);
 
-    if (!result) {
-      next(new Error("something went wrong"));
+    if (result instanceof Error) {
+      next(result);
       return;
     }
 
@@ -27,5 +27,6 @@ module.exports = (db) => async (req, res, next) => {
     });
   } catch (error) {
     console.info("> something went wrong: ", error.message);
+    next(error);
   }
 };
