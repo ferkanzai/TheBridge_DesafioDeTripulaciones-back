@@ -14,7 +14,7 @@ const getUserById = async (db, id) => {
 const getUserByUsername = async (db, username) => {
   try {
     return await db.query(sql`
-      SELECT username FROM users WHERE username = ${username};
+      SELECT * FROM users WHERE username = ${username};
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -25,7 +25,7 @@ const getUserByUsername = async (db, username) => {
 const getUserByEmail = async (db, email) => {
   try {
     return await db.query(sql`
-      SELECT email FROM users WHERE email = ${email};
+      SELECT * FROM users WHERE email = ${email};
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
