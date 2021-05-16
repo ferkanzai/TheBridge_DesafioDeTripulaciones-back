@@ -18,7 +18,7 @@ module.exports = (db) => async (req, res, next) => {
       success: true,
       data: {
         user_id: id,
-        car_id: carId,
+        car_id: Number(carId),
       },
     });
   } catch (error) {
