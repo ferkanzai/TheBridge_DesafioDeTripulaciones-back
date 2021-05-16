@@ -114,6 +114,7 @@ const getUserCars = async (db, userId) => {
   try {
     return await db.query(sql`
       SELECT
+        user_car.id AS userCarId,
         brands.name,
         cars.model,
         cars.range,
