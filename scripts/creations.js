@@ -50,7 +50,7 @@ const createCarsTable = async () => {
         total_power INTEGER,
         drive_type TEXT,
         battery_capacity FLOAT,
-        batter_useable FLOAT,
+        battery_useable FLOAT,
         charge_port TEXT NOT NULL,
         charge_power FLOAT,
         charge_speed INTEGER,

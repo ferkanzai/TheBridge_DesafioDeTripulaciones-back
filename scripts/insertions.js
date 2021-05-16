@@ -306,7 +306,7 @@ const insertCars = async (cars) => {
             total_power,
             drive_type,
             battery_capacity,
-            batter_useable,
+            battery_useable,
             charge_port,
             charge_power,
             charge_speed,
