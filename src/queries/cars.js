@@ -4,7 +4,7 @@ const getCarsByBrand = async (db, brand) => {
   try {
     return await db.query(sql`
       SELECT * FROM cars WHERE brand_id IN (
-        SELECT id FROM brands WHERE name = ${brand}
+        SELECT id FROM brands WHERE LOWER(name) = LOWER(${brand})
       );
     `);
   } catch (error) {
@@ -17,7 +17,7 @@ const getAvailableCarsByBrand = async (db, brand) => {
   try {
     return await db.query(sql`
     SELECT * FROM cars WHERE brand_id IN (
-      SELECT id FROM brands WHERE name = ${brand}
+      SELECT id FROM brands WHERE LOWER(name) = LOWER(${brand})
     ) AND available = true;
     `);
   } catch (error) {
