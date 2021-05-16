@@ -84,7 +84,8 @@ const createUserCarTable = async () => {
       CREATE TABLE IF NOT EXISTS user_car (
         id SERIAL UNIQUE,
         user_id INTEGER NOT NULL REFERENCES users (id) ON DELETE CASCADE,
-        car_id INTEGER NOT NULL REFERENCES cars (id) ON DELETE CASCADE
+        car_id INTEGER NOT NULL REFERENCES cars (id) ON DELETE CASCADE,
+        inserted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(2)
       );
     `);
 
