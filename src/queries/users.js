@@ -122,7 +122,8 @@ const getUserCars = async (db, userId) => {
         cars.battery_useable,
         cars.charge_port,
         cars.fast_charge_port,
-        user_car.inserted_at
+        user_car.inserted_at,
+        user_car.is_primary_car
       FROM brands 
         JOIN cars ON brands.id = cars.brand_id 
         JOIN user_car ON cars.id = user_car.car_id
