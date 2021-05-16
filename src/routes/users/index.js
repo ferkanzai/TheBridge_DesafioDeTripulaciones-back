@@ -1,20 +1,10 @@
-const { authenticateToken } = require("../../middlewares/authMiddlewares");
-
 const router = require("express").Router();
 
 module.exports = (db) => {
-  router.get("/profile", authenticateToken, require("./getProfile")(db));
-  router.get("/cars", authenticateToken, require("./getUserCars")(db));
-  router.post(
-    "/add-car/:carId",
-    authenticateToken,
-    require("./postAddUserCar")(db)
-  );
-  router.delete(
-    "/remove-car/:carId",
-    authenticateToken,
-    require("./deleteRemoveUserCar")(db)
-  );
+  router.get("/profile", require("./getProfile")(db));
+  router.get("/cars", require("./getUserCars")(db));
+  router.post("/add-car/:carId", require("./postAddUserCar")(db));
+  router.delete("/remove-car/:carId", require("./deleteRemoveUserCar")(db));
 
   return router;
 };
