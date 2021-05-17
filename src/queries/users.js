@@ -29,7 +29,7 @@ const getUserByEmail = async (db, email) => {
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
-    return null;
+    return error;
   }
 };
 
@@ -50,6 +50,7 @@ const postInsertUser = async (db, user) => {
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
+    return error;
   }
 };
 

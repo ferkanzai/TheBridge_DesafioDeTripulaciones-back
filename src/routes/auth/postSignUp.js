@@ -1,22 +1,33 @@
 const bcrypt = require("bcrypt");
 
 const { generateAccessToken } = require("../../middlewares/authMiddlewares");
-const { getUserByEmail, postInsertUser } = require("../../queries/users");
+const {
+  getUserByEmail,
+  getUserByUsername,
+  postInsertUser,
+} = require("../../queries/users");
 
 module.exports = (db) => async (req, res, next) => {
   try {
     const { email, username, password } = req.body;
 
     if (!email || !username) {
-      const error = new Error("email and username required");
+      const error = new Error("Email and username required");
       error.code = 400;
       throw error;
     }
 
-    const userExists = (await getUserByEmail(db, email)).rowCount;
+    const emailExists = (await getUserByEmail(db, email)).rowCount;
+    const usernameExists = (await getUserByUsername(db, username)).rowCount;
 
-    if (userExists !== 0) {
+    if (emailExists !== 0) {
       const error = new Error("Email already in use");
+      error.code = 403;
+      throw error;
+    }
+
+    if (usernameExists !== 0) {
+      const error = new Error("Username already in use");
       error.code = 403;
       throw error;
     }
