@@ -26,6 +26,7 @@ const configApp = (app) => {
       success: false,
       info: {
         message: error.message,
+        code: error.code,
       },
     });
   });

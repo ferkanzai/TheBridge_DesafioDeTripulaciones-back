@@ -11,7 +11,11 @@ function authenticateToken(req, res, next) {
 
   try {
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-      if (err) throw new Error("No creds stored or token expired");
+      if (err) {
+        const error = new Error("No creds stored or token expired");
+        error.code = 401;
+        throw error;
+      }
       req.user = user;
       next();
     });
