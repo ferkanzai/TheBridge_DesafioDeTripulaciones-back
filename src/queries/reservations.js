@@ -77,9 +77,24 @@ const getIsConnectionReserved = async (db, connectionId) => {
   }
 };
 
+const putCancelReservation = async (db, reservationId) => {
+  try {
+    return await db.query(sql`
+      UPDATE reservations
+        SET is_past_reservation = true
+        WHERE id = ${reservationId}
+        RETURNING *;
+    `);
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getReservations,
   getPastReservations,
   postStartReservation,
   getIsConnectionReserved,
+  putCancelReservation,
 };
