@@ -26,7 +26,7 @@ function authenticateToken(req, res, next) {
 
 function generateAccessToken(payload) {
   return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: 3600,
+    expiresIn: 3600 * 24,
   });
 }
 
