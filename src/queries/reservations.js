@@ -4,7 +4,9 @@ const getReservations = async (db, userId) => {
   try {
     return await db.query(sql`
       SELECT * FROM reservations
-      WHERE user_id = ${userId};
+      WHERE user_id = ${userId} 
+        AND is_past_reservation = false
+        AND expiration_date > CURRENT_TIMESTAMP at time zone 'utc';
     `);
   } catch (error) {
     console.info("> something went wrong: ", error.message);
@@ -15,6 +17,15 @@ const getReservations = async (db, userId) => {
 const postStartReservation = async (db, userId, connectionId) => {
   try {
     return await db.transaction(async (tx) => {
+      const pastReservationId = (
+        await tx.query(sql`
+        SELECT id FROM reservations
+        WHERE connection_id = ${connectionId} 
+          AND is_past_reservation = false
+          AND expiration_date < CURRENT_TIMESTAMP at time zone 'utc';
+      `)
+      ).rows[0]?.id;
+
       const newReservation = await tx.query(sql`
         INSERT INTO reservations (
           user_id, connection_id
@@ -23,10 +34,13 @@ const postStartReservation = async (db, userId, connectionId) => {
         ) RETURNING *;
       `);
 
-      await tx.query(sql`
-        DELETE FROM reservations
-        WHERE connection_id = ${connectionId} AND user_id <> ${userId};
-      `);
+      if (pastReservationId) {
+        await tx.query(sql`
+          UPDATE reservations
+          SET is_past_reservation = true
+          WHERE id = ${pastReservationId};
+        `);
+      }
 
       return newReservation;
     });
@@ -39,7 +53,10 @@ const postStartReservation = async (db, userId, connectionId) => {
 const getIsConnectionReserved = async (db, connectionId) => {
   try {
     return await db.query(sql`
-      SELECT * FROM reservations WHERE connection_id = ${connectionId}; 
+      SELECT * FROM reservations
+      WHERE connection_id = ${connectionId}
+        AND expiration_date > CURRENT_TIMESTAMP at time zone 'utc'
+        AND is_past_reservation = false; 
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);

@@ -221,6 +221,7 @@ const createReservationsUserConnection = async () => {
         reservation_date TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT (CURRENT_TIMESTAMP(2) AT TIME ZONE 'utc'),
         expiration_date TIMESTAMP WITHOUT TIME ZONE,
         charge_end_date TIMESTAMP WITHOUT TIME ZONE,
+        is_past_reservation BOOLEAN DEFAULT false,
         CONSTRAINT reservation_constraint UNIQUE (user_id, connection_id)
       );
 

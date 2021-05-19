@@ -24,23 +24,7 @@ module.exports = (db) => async (req, res, next) => {
       connectionId
     );
 
-    const now = new Date(Date.now()).toUTCString();
-    const expiration_date = new Date(
-      isConnectionReserved.rows[0]?.expiration_date
-    );
-    const expiration_date_UTC = new Date(
-      expiration_date.getTime() -
-        expiration_date.getTimezoneOffset() * 60 * 1000
-    ).toUTCString();
-    //isConnectionReserved.rows[0]?.expiration_date
-    console.log(expiration_date.getTimezoneOffset());
-    console.log(now);
-    console.log(expiration_date);
-    console.log(expiration_date_UTC);
-
-    console.log(now > expiration_date_UTC);
-
-    if (!!isConnectionReserved.rowCount && now < expiration_date_UTC) {
+    if (!!isConnectionReserved.rowCount) {
       const error = new Error(
         "Unable to create new reservation, connection already reserved"
       );
@@ -48,7 +32,7 @@ module.exports = (db) => async (req, res, next) => {
       throw error;
     }
 
-    const result = await postStartReservation(db, id, connectionId);
+    const result = await postStartReservation(db, id, connectionId, new Date());
 
     if (result instanceof Error) {
       throw result;
@@ -56,8 +40,20 @@ module.exports = (db) => async (req, res, next) => {
 
     const { rows, rowCount } = result;
 
-    rows[0].reservation_date = now;
-    rows[0].expiration_date = expiration_date_UTC;
+    const new_reservation_date = new Date(rows[0].reservation_date);
+    const new_reservation_date_UTC = new Date(
+      new_reservation_date.getTime() -
+        new_reservation_date.getTimezoneOffset() * 60 * 1000
+    ).toUTCString();
+
+    const new_expiration_date = new Date(rows[0].expiration_date);
+    const new_expiration_date_UTC = new Date(
+      new_expiration_date.getTime() -
+        new_expiration_date.getTimezoneOffset() * 60 * 1000
+    ).toUTCString();
+
+    rows[0].reservation_date = new_reservation_date_UTC;
+    rows[0].expiration_date = new_expiration_date_UTC;
 
     res.status(200).json({
       success: true,
