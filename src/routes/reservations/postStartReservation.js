@@ -1,3 +1,4 @@
+const { convertDateToUTC } = require("../../utils/converDateToUTC");
 const {
   getReservations,
   getIsConnectionReserved,
@@ -40,20 +41,20 @@ module.exports = (db) => async (req, res, next) => {
 
     const { rows, rowCount } = result;
 
-    const new_reservation_date = new Date(rows[0].reservation_date);
-    const new_reservation_date_UTC = new Date(
-      new_reservation_date.getTime() -
-        new_reservation_date.getTimezoneOffset() * 60 * 1000
-    ).toUTCString();
+    // const new_reservation_date = new Date(rows[0].reservation_date);
+    // const new_reservation_date_UTC = new Date(
+    //   new_reservation_date.getTime() -
+    //     new_reservation_date.getTimezoneOffset() * 60 * 1000
+    // ).toUTCString();
 
-    const new_expiration_date = new Date(rows[0].expiration_date);
-    const new_expiration_date_UTC = new Date(
-      new_expiration_date.getTime() -
-        new_expiration_date.getTimezoneOffset() * 60 * 1000
-    ).toUTCString();
+    // const new_expiration_date = new Date(rows[0].expiration_date);
+    // const new_expiration_date_UTC = new Date(
+    //   new_expiration_date.getTime() -
+    //     new_expiration_date.getTimezoneOffset() * 60 * 1000
+    // ).toUTCString();
 
-    rows[0].reservation_date = new_reservation_date_UTC;
-    rows[0].expiration_date = new_expiration_date_UTC;
+    rows[0].reservation_date = convertDateToUTC(rows[0].reservation_date);
+    rows[0].expiration_date = convertDateToUTC(rows[0].expiration_date);
 
     res.status(200).json({
       success: true,
