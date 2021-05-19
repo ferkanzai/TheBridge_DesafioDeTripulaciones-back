@@ -6,6 +6,8 @@ const path = require("path");
 const chargePoints = require("../scrap/charge-points.json").features;
 
 const prices = ["0", "0.30", "0.40", "0.50"];
+const randomizer = (num) => Math.floor(Math.random() * num);
+const randomizeRating = (num) => (Math.random() * num).toFixed(1);
 
 const getOperators = (arr) => {
   const operators = arr
@@ -44,6 +46,7 @@ const mappingChargePoints = (points) => {
       latitude: point.geometry.coordinates[1],
       longitude: point.geometry.coordinates[0],
       town: point.properties.poi.addressInfo.town || null,
+      lastVerified: point.properties.poi.dateLastVerified || null,
       stateOrProvince: point.properties.poi.addressInfo.stateOrProvince || null,
       country: point.properties.poi.addressInfo.country.isoCode || null,
       name: point.properties.name,
@@ -53,6 +56,9 @@ const mappingChargePoints = (points) => {
         !point.properties.poi.operatorInfo?.title
           ? "Unknown Operator"
           : point.properties.poi.operatorInfo.title,
+      waitingTime: randomizer(40),
+      rating: randomizeRating(5),
+      votes: randomizer(250),
     };
 
     const connectionsMapped = point.properties.poi.connections.map(
@@ -87,21 +93,29 @@ const insertChargePoints = async (points) => {
           INSERT INTO charge_points (
             latitude,
             longitude,
+            last_verified,
             town,
             state_or_province,
             country,
             name,
             description,
-            operator_id
+            operator_id,
+            waiting_time,
+            rating,
+            votes
           ) VALUES (
             ${point.pointMapped.latitude},
             ${point.pointMapped.longitude},
+            ${point.pointMapped.lastVerified},
             ${point.pointMapped.town},
             ${point.pointMapped.stateOrProvince},
             ${point.pointMapped.country},
             ${point.pointMapped.name},
             ${point.pointMapped.description},
-            ${pointOperator}
+            ${pointOperator},
+            ${point.pointMapped.waitingTime},
+            ${point.pointMapped.rating},
+            ${point.pointMapped.votes}
           ) ON CONFLICT DO NOTHING RETURNING id;
         `);
 

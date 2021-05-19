@@ -85,6 +85,7 @@ const createUserCarTable = async () => {
         id SERIAL UNIQUE,
         user_id INTEGER NOT NULL REFERENCES users (id) ON DELETE CASCADE,
         car_id INTEGER NOT NULL REFERENCES cars (id) ON DELETE CASCADE,
+        alias TEXT,
         inserted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(2),
         is_primary_car BOOLEAN DEFAULT false
       );
@@ -137,12 +138,16 @@ const createChargePointsTable = async () => {
         id SERIAL UNIQUE,
         latitude FLOAT NOT NULL,
         longitude FLOAT NOT NULL,
+        last_verified TIMESTAMP,
         town TEXT,
         state_or_province TEXT,
         country TEXT,
         name TEXT,
         description TEXT,
-        operator_id INTEGER REFERENCES operators (id) ON DELETE SET NULL
+        operator_id INTEGER REFERENCES operators (id) ON DELETE SET NULL,
+        waiting_time INTEGER,
+        rating FLOAT,
+        votes INTEGER
       );
     `);
 
@@ -227,7 +232,7 @@ const createReservationsUserConnection = async () => {
 
       CREATE OR REPLACE FUNCTION add_expiration_date() RETURNS TRIGGER AS $date$
         BEGIN
-          NEW.expiration_date := (CURRENT_TIMESTAMP(2) AT TIME ZONE 'utc') + INTERVAL '15 minutes';
+          NEW.expiration_date := (CURRENT_TIMESTAMP(2) AT TIME ZONE 'utc') + INTERVAL '20 minutes';
           RETURN NEW;
         END;
       $date$ LANGUAGE plpgsql;
