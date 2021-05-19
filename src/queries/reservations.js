@@ -14,6 +14,19 @@ const getReservations = async (db, userId) => {
   }
 };
 
+const getPastReservations = async (db, userId) => {
+  try {
+    return await db.query(sql`
+      SELECT * FROM reservations
+      WHERE user_id = ${userId} 
+        AND is_past_reservation = true;
+    `);
+  } catch (error) {
+    console.info("> something went wrong: ", error.message);
+    return error;
+  }
+};
+
 const postStartReservation = async (db, userId, connectionId) => {
   try {
     return await db.transaction(async (tx) => {
@@ -66,6 +79,7 @@ const getIsConnectionReserved = async (db, connectionId) => {
 
 module.exports = {
   getReservations,
+  getPastReservations,
   postStartReservation,
   getIsConnectionReserved,
 };
