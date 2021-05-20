@@ -1,21 +1,19 @@
 const bcrypt = require("bcrypt");
 
 const { generateAccessToken } = require("../../middlewares/authMiddlewares");
-const { getUserByUsername, getUserByEmail } = require("../../queries/users");
+const { getUserByEmail } = require("../../queries/users");
 
 module.exports = (db) => async (req, res, next) => {
   try {
-    const { email, username, password } = req.body;
+    const { email, password } = req.body;
 
-    if (!email && !username) {
-      const error = new Error("email or username required");
+    if (!email) {
+      const error = new Error("email required");
       error.code = 400;
       throw error;
     }
 
-    const foundUser = !!email
-      ? (await getUserByEmail(db, email)).rows
-      : (await getUserByUsername(db, username)).rows;
+    const foundUser = (await getUserByEmail(db, email)).rows;
 
     if (
       !foundUser.length ||
@@ -26,10 +24,6 @@ module.exports = (db) => async (req, res, next) => {
 
     const payload = {
       id: foundUser[0].id,
-      email: foundUser[0].email,
-      username: foundUser[0].username,
-      hasCar: foundUser[0].has_car,
-      isActive: foundUser[0].is_active,
     };
 
     const token = generateAccessToken(payload);

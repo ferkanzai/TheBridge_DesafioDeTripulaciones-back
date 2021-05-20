@@ -6,7 +6,6 @@ const createUserTable = async () => {
     await db.query(sql`
       CREATE TABLE IF NOT EXISTS users (
         id SERIAL UNIQUE,
-        username TEXT UNIQUE NOT NULL,
         email TEXT UNIQUE NOT NULL,
         password TEXT NOT NULL,
         has_car BOOLEAN NOT NULL,

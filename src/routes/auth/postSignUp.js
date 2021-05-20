@@ -1,11 +1,7 @@
 const bcrypt = require("bcrypt");
 
 const { generateAccessToken } = require("../../middlewares/authMiddlewares");
-const {
-  getUserByEmail,
-  getUserByUsername,
-  postInsertUser,
-} = require("../../queries/users");
+const { getUserByEmail, postInsertUser } = require("../../queries/users");
 
 module.exports = (db) => async (req, res, next) => {
   try {
@@ -18,7 +14,6 @@ module.exports = (db) => async (req, res, next) => {
     }
 
     const emailExists = (await getUserByEmail(db, email)).rowCount;
-    const usernameExists = (await getUserByUsername(db, username)).rowCount;
 
     if (emailExists !== 0) {
       const error = new Error("Email already in use");
@@ -26,16 +21,9 @@ module.exports = (db) => async (req, res, next) => {
       throw error;
     }
 
-    if (usernameExists !== 0) {
-      const error = new Error("Username already in use");
-      error.code = 403;
-      throw error;
-    }
-
     const newUser = {
       email,
       password: bcrypt.hashSync(password, 12),
-      username: username,
       hasCar: false,
     };
 

@@ -3,18 +3,7 @@ const { sql } = require("slonik");
 const getUserById = async (db, id) => {
   try {
     return await db.query(sql`
-      SELECT id, email, username FROM users WHERE id = ${id};
-    `);
-  } catch (error) {
-    console.info("> something went wrong:", error.message);
-    return null;
-  }
-};
-
-const getUserByUsername = async (db, username) => {
-  try {
-    return await db.query(sql`
-      SELECT * FROM users WHERE username = ${username};
+      SELECT id, email FROM users WHERE id = ${id};
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -38,15 +27,13 @@ const postInsertUser = async (db, user) => {
     return await db.query(sql`
       INSERT INTO users (
         email,
-        username,
         password,
         has_car
       ) VALUES (
         ${user.email},
-        ${user.username},
         ${user.password},
         ${user.hasCar}
-      ) RETURNING id, email, username, has_car, is_active;
+      ) RETURNING id, email, has_car, is_active;
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -140,7 +127,6 @@ const getUserCars = async (db, userId) => {
 
 module.exports = {
   getUserById,
-  getUserByUsername,
   getUserByEmail,
   postInsertUser,
   postAddUserCar,
