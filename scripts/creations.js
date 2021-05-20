@@ -242,6 +242,23 @@ const createReservationsUserConnection = async () => {
   }
 };
 
+const createUserRatingTable = async () => {
+  try {
+    await db.query(sql`
+      CREATE TABLE IF NOT EXISTS user_rating (
+        id SERIAL UNIQUE,
+        user_id INTEGER NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+        charge_point_id INTEGER NOT NULL REFERENCES charge_points (id) ON DELETE CASCADE,
+        rating INTEGER NOT NULL
+      );
+    `);
+
+    console.info("> User rating table created");
+  } catch (error) {
+    console.info("> error creating user rating table:", error.message);
+  }
+};
+
 (async () => {
   await createUserTable();
   await createBrandsTable();
@@ -251,6 +268,6 @@ const createReservationsUserConnection = async () => {
   await createChargePointsTable();
   await createUserChargePointFavoritesTable();
   await createConnectionsTable();
-  // await createChargePointConnectionsTable();
   await createReservationsUserConnection();
+  await createUserRatingTable();
 })();
