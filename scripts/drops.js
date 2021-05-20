@@ -84,19 +84,6 @@ const dropConnections = async () => {
   }
 };
 
-const dropChargePointConnections = async () => {
-  try {
-    await db.query(sql`
-      DROP TABLE charge_point_connections;
-    `);
-  } catch (error) {
-    console.info(
-      "> error dropping charge point connections data:",
-      error.message
-    );
-  }
-};
-
 const dropReservationsUserConnections = async () => {
   try {
     await db.query(sql`
@@ -107,6 +94,16 @@ const dropReservationsUserConnections = async () => {
   }
 };
 
+const dropRatings = async () => {
+  try {
+    await db.query(sql`
+      DROP TABLE user_rating
+    `);
+  } catch (error) {
+    console.info("> error dropping user ratings data:", error.message);
+  }
+};
+
 (async () => {
   console.info("> dropping data");
   await dropUserChargePointFavorites();
@@ -114,8 +111,8 @@ const dropReservationsUserConnections = async () => {
   await dropCars();
   await dropBrands();
   await dropReservationsUserConnections();
+  await dropRatings();
   await dropUsers();
-  // await dropChargePointConnections();
   await dropConnections();
   await dropChargePoints();
   await dropOperators();

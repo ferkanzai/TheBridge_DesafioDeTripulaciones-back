@@ -215,8 +215,7 @@ const createReservationsUserConnection = async () => {
         reservation_date TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT (CURRENT_TIMESTAMP(2) AT TIME ZONE 'utc'),
         expiration_date TIMESTAMP WITHOUT TIME ZONE,
         charge_end_date TIMESTAMP WITHOUT TIME ZONE,
-        is_past_reservation BOOLEAN DEFAULT false,
-        CONSTRAINT reservation_constraint UNIQUE (user_id, connection_id)
+        is_past_reservation BOOLEAN DEFAULT false
       );
 
       CREATE OR REPLACE FUNCTION add_expiration_date() RETURNS TRIGGER AS $date$
@@ -248,7 +247,8 @@ const createUserRatingTable = async () => {
         id SERIAL UNIQUE,
         user_id INTEGER NOT NULL REFERENCES users (id) ON DELETE CASCADE,
         charge_point_id INTEGER NOT NULL REFERENCES charge_points (id) ON DELETE CASCADE,
-        rating INTEGER NOT NULL
+        rating INTEGER NOT NULL,
+        CONSTRAINT user_rating_constraint UNIQUE (user_id, charge_point_id)
       );
     `);
 
