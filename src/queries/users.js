@@ -125,6 +125,20 @@ const getUserCars = async (db, userId) => {
   }
 };
 
+const putUpdateCarAlias = async (db, userId, userCarId, alias) => {
+  try {
+    return await db.query(sql`
+      UPDATE user_car
+        SET alias = ${alias}
+        WHERE id = ${userCarId} AND user_id = ${userId}
+      RETURNING *;
+    `);
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getUserById,
   getUserByEmail,
@@ -132,4 +146,5 @@ module.exports = {
   postAddUserCar,
   deleteRemoveUserCar,
   getUserCars,
+  putUpdateCarAlias,
 };
