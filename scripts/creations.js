@@ -206,25 +206,6 @@ const createConnectionsTable = async () => {
   }
 };
 
-const createChargePointConnectionsTable = async () => {
-  try {
-    await db.query(sql`
-      CREATE TABLE IF NOT EXISTS charge_point_connections (
-        id SERIAL UNIQUE,
-        charge_point_id INTEGER NOT NULL REFERENCES charge_points (id) ON DELETE CASCADE,
-        connection_id INTEGER NOT NULL REFERENCES connections (id) ON DELETE CASCADE
-      );
-    `);
-
-    console.info("> Charge point connections table created");
-  } catch (error) {
-    console.info(
-      "> error creating charge point connections table:",
-      error.message
-    );
-  }
-};
-
 const createReservationsUserConnection = async () => {
   try {
     await db.query(sql`
