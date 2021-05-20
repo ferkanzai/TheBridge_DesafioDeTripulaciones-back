@@ -6,7 +6,6 @@ const createUserTable = async () => {
     await db.query(sql`
       CREATE TABLE IF NOT EXISTS users (
         id SERIAL UNIQUE,
-        username TEXT UNIQUE NOT NULL,
         email TEXT UNIQUE NOT NULL,
         password TEXT NOT NULL,
         has_car BOOLEAN NOT NULL,
@@ -206,25 +205,6 @@ const createConnectionsTable = async () => {
   }
 };
 
-const createChargePointConnectionsTable = async () => {
-  try {
-    await db.query(sql`
-      CREATE TABLE IF NOT EXISTS charge_point_connections (
-        id SERIAL UNIQUE,
-        charge_point_id INTEGER NOT NULL REFERENCES charge_points (id) ON DELETE CASCADE,
-        connection_id INTEGER NOT NULL REFERENCES connections (id) ON DELETE CASCADE
-      );
-    `);
-
-    console.info("> Charge point connections table created");
-  } catch (error) {
-    console.info(
-      "> error creating charge point connections table:",
-      error.message
-    );
-  }
-};
-
 const createReservationsUserConnection = async () => {
   try {
     await db.query(sql`
@@ -235,8 +215,7 @@ const createReservationsUserConnection = async () => {
         reservation_date TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT (CURRENT_TIMESTAMP(2) AT TIME ZONE 'utc'),
         expiration_date TIMESTAMP WITHOUT TIME ZONE,
         charge_end_date TIMESTAMP WITHOUT TIME ZONE,
-        is_past_reservation BOOLEAN DEFAULT false,
-        CONSTRAINT reservation_constraint UNIQUE (user_id, connection_id)
+        is_past_reservation BOOLEAN DEFAULT false
       );
 
       CREATE OR REPLACE FUNCTION add_expiration_date() RETURNS TRIGGER AS $date$
@@ -261,6 +240,24 @@ const createReservationsUserConnection = async () => {
   }
 };
 
+const createUserRatingTable = async () => {
+  try {
+    await db.query(sql`
+      CREATE TABLE IF NOT EXISTS user_rating (
+        id SERIAL UNIQUE,
+        user_id INTEGER NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+        charge_point_id INTEGER NOT NULL REFERENCES charge_points (id) ON DELETE CASCADE,
+        rating INTEGER NOT NULL,
+        CONSTRAINT user_rating_constraint UNIQUE (user_id, charge_point_id)
+      );
+    `);
+
+    console.info("> User rating table created");
+  } catch (error) {
+    console.info("> error creating user rating table:", error.message);
+  }
+};
+
 (async () => {
   await createUserTable();
   await createBrandsTable();
@@ -270,6 +267,6 @@ const createReservationsUserConnection = async () => {
   await createChargePointsTable();
   await createUserChargePointFavoritesTable();
   await createConnectionsTable();
-  // await createChargePointConnectionsTable();
   await createReservationsUserConnection();
+  await createUserRatingTable();
 })();
