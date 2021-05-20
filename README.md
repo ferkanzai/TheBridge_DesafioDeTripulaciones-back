@@ -8,7 +8,7 @@ Documentation for the _Desafio de Tripulaciones - Electric Cars_
 
 The first thing that needs to be done is configure the `.env` file in order to work with the environment variables. For this, I set up a `.env.dist` file where you can see which variables need to be created. There are the following ones:
 
-- SLONIK_URL: This is the URL pointing to the PostgreSQL DB, with the following format `postgres://<username>:<password>@<url>:<port>/<DB>`
+- DATABASE_URL: This is the URL pointing to the PostgreSQL DB, with the following format `postgres://<username>:<password>@<url>:<port>/<DB>`
 - ACCESS_TOKEN_SECRET: secret word which will be used in order to sign and verify user's JWT
 
 After this first set up, it's needed to run `npm install` in order to install the necessary dependencies of the server.
