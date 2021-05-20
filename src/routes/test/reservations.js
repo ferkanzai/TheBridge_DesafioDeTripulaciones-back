@@ -1,4 +1,4 @@
-const { getReservations } = require("../../queries/test");
+const { getReservations } = require("../../queries/reservations");
 
 module.exports = (db) => async (req, res, next) => {
   try {
