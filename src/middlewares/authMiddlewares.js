@@ -26,8 +26,6 @@ function authenticateToken(req, res, next) {
         id: userFromDb,
       };
 
-      console.log(req.user);
-
       next();
     });
   } catch (err) {
