@@ -9,10 +9,10 @@ const {
 
 module.exports = (db) => async (req, res, next) => {
   try {
-    const { email, username, password } = req.body;
+    const { email, password } = req.body;
 
-    if (!email || !username) {
-      const error = new Error("Email and username required");
+    if (!email || !password) {
+      const error = new Error("Email and password required in body");
       error.code = 400;
       throw error;
     }

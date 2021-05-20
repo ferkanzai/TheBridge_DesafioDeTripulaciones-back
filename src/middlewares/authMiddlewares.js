@@ -1,5 +1,8 @@
 const jwt = require("jsonwebtoken");
 
+const db = require("../../config/db");
+const { getUserById } = require("../queries/users");
+
 function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"];
   const token = authHeader && authHeader.split(" ")[1];
@@ -10,13 +13,21 @@ function authenticateToken(req, res, next) {
   }
 
   try {
-    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, async (err, user) => {
       if (err) {
         const error = new Error("No creds stored or token expired");
         error.code = 401;
         throw error;
       }
-      req.user = user;
+
+      const userFromDb = (await getUserById(db, user.id)).rows[0].id;
+
+      req.user = {
+        id: userFromDb,
+      };
+
+      console.log(req.user);
+
       next();
     });
   } catch (err) {
