@@ -122,6 +122,40 @@ const postStartNormalCharge = async (db, userId, userCarId, reservationId) => {
   }
 };
 
+const postStartFastCharge = async (db, userId, userCarId, reservationId) => {
+  try {
+    return await db.transaction(async (tx) => {
+      const isFastChargeCapable = await tx.query(sql`
+        SELECT is_fast_charge FROM connections WHERE id = (
+          SELECT connection_id FROM reservations WHERE id = ${reservationId}
+        );
+      `);
+
+      if (!isFastChargeCapable.rows[0].is_fast_charge) {
+        throw new Error("Connection has no fast charge capabilities");
+      }
+
+      await tx.query(sql`
+      WITH time_to_charge AS (
+        SELECT time_to_charge
+          FROM cars JOIN user_car ON user_car.car_id = cars.id,
+        LATERAL charge_time(cars.range, cars.fast_charge_speed) time_to_charge
+          WHERE user_car.user_id = ${userId} AND user_car.id = ${userCarId}
+      )
+
+      UPDATE reservations
+        SET charge_end_date = (CURRENT_TIMESTAMP(2) AT TIME ZONE 'UTC') + ((SELECT * FROM time_to_charge) || ' minutes')::INTERVAL
+        WHERE id = ${reservationId}
+          AND ( charge_end_date < CURRENT_TIMESTAMP at time zone 'utc' OR charge_end_date IS NULL)
+      RETURNING *;
+    `);
+    });
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getReservations,
   getPastReservations,
@@ -129,5 +163,5 @@ module.exports = {
   getIsConnectionReserved,
   putStopReservationOrCharge,
   postStartNormalCharge,
-  // postStartFastCharge,
+  postStartFastCharge,
 };

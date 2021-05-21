@@ -2,6 +2,7 @@ const {
   postStartNormalCharge,
   getReservations,
   getPastReservations,
+  postStartFastCharge,
 } = require("../../queries/reservations");
 const { getUserCars } = require("../../queries/users");
 const { convertDateToUTC } = require("../../utils/converDateToUTC");
@@ -9,7 +10,7 @@ const { convertDateToUTC } = require("../../utils/converDateToUTC");
 module.exports = (db) => async (req, res, next) => {
   const { id } = req.user;
   const { reservationId } = req.params;
-  const { userCarId } = req.query;
+  const { userCarId, isFastCharge } = req.query;
 
   try {
     const hasReservation = await getReservations(db, id);
@@ -52,12 +53,10 @@ module.exports = (db) => async (req, res, next) => {
       throw error;
     }
 
-    const result = await postStartNormalCharge(
-      db,
-      id,
-      userCarId,
-      reservationId
-    );
+    const result =
+      isFastCharge === "1"
+        ? await postStartFastCharge(db, id, userCarId, reservationId)
+        : await postStartNormalCharge(db, id, userCarId, reservationId);
 
     if (result instanceof Error) {
       next(result);
