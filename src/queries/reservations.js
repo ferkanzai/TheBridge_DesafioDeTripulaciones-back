@@ -6,7 +6,10 @@ const getReservations = async (db, userId) => {
       SELECT * FROM reservations
       WHERE user_id = ${userId} 
         AND is_past_reservation = false
-        AND expiration_date > CURRENT_TIMESTAMP at time zone 'utc';
+        AND (
+          expiration_date > CURRENT_TIMESTAMP at time zone 'utc'
+          OR charge_end_date > CURRENT_TIMESTAMP at time zone 'utc'
+        );
     `);
   } catch (error) {
     console.info("> something went wrong: ", error.message);
@@ -35,7 +38,10 @@ const postStartReservation = async (db, userId, connectionId) => {
         SELECT id FROM reservations
         WHERE connection_id = ${connectionId} 
           AND is_past_reservation = false
-          AND expiration_date < CURRENT_TIMESTAMP at time zone 'utc';
+          AND (
+            expiration_date < CURRENT_TIMESTAMP at time zone 'utc'
+            OR charge_end_date < CURRENT_TIMESTAMP at time zone 'utc'
+          );
       `)
       ).rows[0]?.id;
 
@@ -68,8 +74,11 @@ const getIsConnectionReserved = async (db, connectionId) => {
     return await db.query(sql`
       SELECT * FROM reservations
       WHERE connection_id = ${connectionId}
-        AND expiration_date > CURRENT_TIMESTAMP at time zone 'utc'
-        AND is_past_reservation = false; 
+        AND ( 
+          expiration_date > CURRENT_TIMESTAMP at time zone 'utc' 
+          OR charge_end_date > CURRENT_TIMESTAMP at time zone 'utc'
+        )
+        AND is_past_reservation = false;
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -77,7 +86,7 @@ const getIsConnectionReserved = async (db, connectionId) => {
   }
 };
 
-const putCancelReservation = async (db, reservationId) => {
+const putStopReservationOrCharge = async (db, reservationId) => {
   try {
     return await db.query(sql`
       UPDATE reservations
@@ -91,10 +100,34 @@ const putCancelReservation = async (db, reservationId) => {
   }
 };
 
+const postStartNormalCharge = async (db, userId, userCarId, reservationId) => {
+  try {
+    return await db.query(sql`
+      WITH time_to_charge AS (
+        SELECT time_to_charge
+          FROM cars JOIN user_car ON user_car.car_id = cars.id,
+        LATERAL charge_time(cars.range, cars.charge_speed) time_to_charge
+          WHERE user_car.user_id = ${userId} AND user_car.id = ${userCarId}
+      )
+
+      UPDATE reservations
+        SET charge_end_date = (CURRENT_TIMESTAMP(2) AT TIME ZONE 'UTC') + ((SELECT * FROM time_to_charge) || ' minutes')::INTERVAL
+        WHERE id = ${reservationId}
+          AND ( charge_end_date < CURRENT_TIMESTAMP at time zone 'utc' OR charge_end_date IS NULL)
+      RETURNING *;
+    `);
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getReservations,
   getPastReservations,
   postStartReservation,
   getIsConnectionReserved,
-  putCancelReservation,
+  putStopReservationOrCharge,
+  postStartNormalCharge,
+  // postStartFastCharge,
 };
