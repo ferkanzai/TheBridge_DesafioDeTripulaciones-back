@@ -1,11 +1,11 @@
-const { putCancelReservation } = require("../../queries/reservations");
+const { putStopReservationOrCharge } = require("../../queries/reservations");
 const { convertDateToUTC } = require("../../utils/converDateToUTC");
 
 module.exports = (db) => async (req, res, next) => {
   const { reservationId } = req.params;
 
   try {
-    const result = await putCancelReservation(db, reservationId);
+    const result = await putStopReservationOrCharge(db, reservationId);
 
     console.log(result);
 

@@ -69,6 +69,15 @@ const createCarsTable = async () => {
         platform TEXT,
         car_body TEXT
       );
+      
+      CREATE OR REPLACE FUNCTION charge_time(range INTEGER, speed INTEGER) RETURNS FLOAT AS $$
+      DECLARE
+        time_calculated FLOAT := range / speed::FLOAT;
+        time_interval FLOAT := (time_calculated * 60) + 5;
+      BEGIN                                                     
+          RETURN time_interval;
+      END  
+      $$ LANGUAGE plpgsql;
     `);
 
     console.info("> Cars table created");
