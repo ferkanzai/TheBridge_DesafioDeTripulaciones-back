@@ -10,7 +10,12 @@ module.exports = (db) => {
     authenticateToken,
     require("./postRate")(db)
   );
-  router.get("/compatible", require("./getCompatible")(db));
+  router.get("/compatible", authenticateToken, require("./getCompatible")(db));
+  router.get(
+    "/compatible/distance",
+    authenticateToken,
+    require("./getCompatibleFromDistance")(db)
+  );
 
   return router;
 };
