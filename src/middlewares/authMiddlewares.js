@@ -14,17 +14,28 @@ function authenticateToken(req, res, next) {
 
   try {
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, async (err, user) => {
-      if (err) {
-        const error = new Error("No creds stored or token expired");
-        error.code = 401;
-        throw error;
+      try {
+        if (err) {
+          const error = new Error("No creds stored or token expired");
+          error.code = 401;
+          throw error;
+        }
+
+        const userFromDb = await getUserById(db, user.id);
+
+        if (!userFromDb.rowCount) {
+          console.log("user from db");
+          const error = new Error("Not user");
+          error.code = 401;
+          throw error;
+        }
+
+        req.user = {
+          id: userFromDb.rows[0].id,
+        };
+      } catch (error) {
+        next(error);
       }
-
-      const userFromDb = (await getUserById(db, user.id)).rows[0].id;
-
-      req.user = {
-        id: userFromDb,
-      };
 
       next();
     });
