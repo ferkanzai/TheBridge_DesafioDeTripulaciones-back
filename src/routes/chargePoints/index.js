@@ -10,6 +10,7 @@ module.exports = (db) => {
     authenticateToken,
     require("./postRate")(db)
   );
+  router.get("/compatible", require("./getCompatible")(db));
 
   return router;
 };
