@@ -44,7 +44,7 @@ module.exports = (db) => async (req, res, next) => {
     }
 
     const isPastReservation = pastReservations.rows.filter(
-      (row) => row.id == Number(reservationId)
+      (row) => row.id === Number(reservationId)
     );
 
     if (isPastReservation.length) {

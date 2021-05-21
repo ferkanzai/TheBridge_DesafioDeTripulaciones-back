@@ -156,6 +156,20 @@ const postStartFastCharge = async (db, userId, userCarId, reservationId) => {
   }
 };
 
+const putExtend = async (db, reservationId) => {
+  try {
+    return await db.query(sql`
+      UPDATE reservations
+        SET expiration_date = expiration_date + '10 minutes'::INTERVAL
+        WHERE id = ${reservationId}
+        RETURNING *;
+    `);
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getReservations,
   getPastReservations,
@@ -164,4 +178,5 @@ module.exports = {
   putStopReservationOrCharge,
   postStartNormalCharge,
   postStartFastCharge,
+  putExtend,
 };
