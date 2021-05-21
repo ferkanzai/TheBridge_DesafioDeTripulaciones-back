@@ -14,8 +14,8 @@ const getAllChargePoints = async (db) => {
 const getChargePointsByDistance = async (db, latitude, longitude, distance) => {
   try {
     return await db.query(sql`
-      SELECT cp.*, distance.*
-      FROM charge_points cp,
+      SELECT cp.*, distance.*, o.name AS operator_name, o.cost AS price
+      FROM charge_points AS cp JOIN operators AS o ON o.id = cp.operator_id,
           LATERAL distance(cp.latitude, cp.longitude, ${latitude}, ${longitude}) distance
       WHERE distance < ${distance}
     `);
