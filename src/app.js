@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 
 const db = require("../config/db");
 const appRouter = require("./routes")(db);
@@ -7,6 +8,13 @@ const appRouter = require("./routes")(db);
 const app = express();
 
 const configApp = (app) => {
+  app.use(
+    cors({
+      origin: true,
+      credentials: true,
+    })
+  );
+
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
 
