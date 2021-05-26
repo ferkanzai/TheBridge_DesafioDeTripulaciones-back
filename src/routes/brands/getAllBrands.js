@@ -18,5 +18,6 @@ module.exports = (db) => async (req, res, next) => {
     });
   } catch (error) {
     console.info("> something went wrong: ", error.message);
+    next(error);
   }
 };
