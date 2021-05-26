@@ -8,6 +8,10 @@ module.exports = (db) => {
     "/car/change-alias/:userCarId",
     require("./putUpdateCarAlias")(db)
   );
+  router.put(
+    "/car/change-primary/:userCarId",
+    require("./putChangeUserCarPrimary")(db)
+  );
   router.delete("/remove-car/:carId", require("./deleteRemoveUserCar")(db));
 
   return router;
