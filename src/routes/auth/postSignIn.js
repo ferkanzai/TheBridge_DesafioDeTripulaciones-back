@@ -7,8 +7,8 @@ module.exports = (db) => async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
-    if (!email) {
-      const error = new Error("email required");
+    if (!email || !password) {
+      const error = new Error("email and password required");
       error.code = 400;
       throw error;
     }
@@ -17,10 +17,12 @@ module.exports = (db) => async (req, res, next) => {
 
     if (
       !foundUser.length ||
-      // !foundUser2 ||
       !bcrypt.compareSync(password, foundUser[0].password)
-    )
-      throw new Error("Bad credentials");
+    ) {
+      const error = new Error("Bad credentials");
+      error.code = 403;
+      throw error;
+    }
 
     const payload = {
       id: foundUser[0].id,

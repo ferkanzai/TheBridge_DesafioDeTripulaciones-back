@@ -2,8 +2,15 @@ const { getAvailableCarsByBrand } = require("../../queries/cars");
 
 module.exports = (db) => async (req, res, next) => {
   const { brand } = req.params;
+  const brandId = Number(brand);
 
   try {
+    if (isNaN(brandId)) {
+      const error = new Error("Brand ID must be a number");
+      error.code = 400;
+      throw error;
+    }
+
     const result = await getAvailableCarsByBrand(db, brand);
 
     if (!result) {

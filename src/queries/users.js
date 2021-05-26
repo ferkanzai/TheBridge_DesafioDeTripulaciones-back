@@ -3,7 +3,7 @@ const { sql } = require("slonik");
 const getUserById = async (db, id) => {
   try {
     return await db.query(sql`
-      SELECT id, email FROM users WHERE id = ${id};
+      SELECT id FROM users WHERE id = ${id};
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -14,7 +14,7 @@ const getUserById = async (db, id) => {
 const getUserByEmail = async (db, email) => {
   try {
     return await db.query(sql`
-      SELECT * FROM users WHERE email = ${email};
+      SELECT id, password FROM users WHERE email = ${email};
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -44,12 +44,35 @@ const postInsertUser = async (db, user) => {
 const postAddUserCar = async (db, userId, carId) => {
   try {
     return await db.transaction(async (tx) => {
-      const newUserCar = await tx.query(sql`
+      const insertedCar = await tx.query(sql`
         INSERT INTO user_car (
           user_id, car_id
         ) VALUES (
           ${userId}, ${carId}
         ) RETURNING *;
+      `);
+
+      const newUserCarId = insertedCar.rows[0].id;
+
+      const newUserCar = await tx.query(sql`
+        SELECT
+          user_car.id AS user_car_id,
+          brands.name,
+          cars.id AS car_id,
+          cars.model,
+          cars.range,
+          cars.total_power,
+          cars.drive_type,
+          cars.battery_useable,
+          cars.charge_port,
+          cars.fast_charge_port,
+          user_car.alias,
+          user_car.inserted_at,
+          user_car.is_primary_car
+        FROM brands 
+          JOIN cars ON brands.id = cars.brand_id 
+          JOIN user_car ON cars.id = user_car.car_id
+        WHERE user_car.id = ${newUserCarId}
       `);
 
       await tx.query(sql`
@@ -72,12 +95,21 @@ const deleteRemoveUserCar = async (db, userId, userCarId) => {
       const userCars = await tx.query(sql`
         DELETE FROM user_car
         WHERE id = ${userCarId}
+        AND is_primary_car <> true
         RETURNING (
           SELECT COUNT(user_id)
           FROM user_car 
           WHERE user_id = ${userId}
         );
       `);
+
+      if (!userCars.rowCount) {
+        const error = new Error(
+          "Please, change primary car before deleting it"
+        );
+        error.code = 403;
+        throw error;
+      }
 
       const userHasCars = userCars.rows[0].count - 1;
 
@@ -89,12 +121,14 @@ const deleteRemoveUserCar = async (db, userId, userCarId) => {
         `);
       }
 
-      if (!userCars.rowCount) return false;
+      if (!userCars.rowCount)
+        throw new Error("Trying to delete a row that does not exist");
 
-      return true;
+      return userCars;
     });
   } catch (error) {
     console.info("> something went wrong:", error.message);
+    return error;
   }
 };
 
@@ -102,8 +136,9 @@ const getUserCars = async (db, userId) => {
   try {
     return await db.query(sql`
       SELECT
-        user_car.id AS userCarId,
+        user_car.id AS user_car_id,
         brands.name,
+        cars.id AS car_id,
         cars.model,
         cars.range,
         cars.total_power,
@@ -111,6 +146,7 @@ const getUserCars = async (db, userId) => {
         cars.battery_useable,
         cars.charge_port,
         cars.fast_charge_port,
+        user_car.alias,
         user_car.inserted_at,
         user_car.is_primary_car
       FROM brands 
@@ -118,6 +154,34 @@ const getUserCars = async (db, userId) => {
         JOIN user_car ON cars.id = user_car.car_id
       WHERE user_car.user_id = ${userId}
       ORDER BY user_car.inserted_at;
+    `);
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
+const getSingleUserCarById = async (db, userId, userCarId) => {
+  try {
+    return await db.query(sql`
+      SELECT
+        user_car.id AS user_car_id,
+        brands.name,
+        cars.id AS car_id,
+        cars.model,
+        cars.range,
+        cars.total_power,
+        cars.drive_type,
+        cars.battery_useable,
+        cars.charge_port,
+        cars.fast_charge_port,
+        user_car.alias,
+        user_car.inserted_at,
+        user_car.is_primary_car
+      FROM brands 
+        JOIN cars ON brands.id = cars.brand_id 
+        JOIN user_car ON cars.id = user_car.car_id
+      WHERE user_car.user_id = ${userId} AND user_car.id = ${userCarId};
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -139,6 +203,37 @@ const putUpdateCarAlias = async (db, userId, userCarId, alias) => {
   }
 };
 
+const putChangeUserCarPrimary = async (db, userId, userCarId) => {
+  try {
+    return await db.transaction(async (tx) => {
+      const pastPrimary = await tx.query(sql`
+        UPDATE user_car
+          SET is_primary_car = false
+          WHERE user_id = ${userId} AND is_primary_car = true
+        RETURNING *;
+      `);
+
+      const newPrimary = await tx.query(sql`
+        UPDATE user_car
+          SET is_primary_car = true
+          WHERE user_id = ${userId} AND id = ${userCarId}
+        RETURNING *;
+      `);
+
+      if (!pastPrimary.rowCount) {
+        const error = new Error("No primary car has been changed");
+        error.code = 403;
+        throw error;
+      }
+
+      return newPrimary;
+    });
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getUserById,
   getUserByEmail,
@@ -147,4 +242,6 @@ module.exports = {
   deleteRemoveUserCar,
   getUserCars,
   putUpdateCarAlias,
+  putChangeUserCarPrimary,
+  getSingleUserCarById,
 };

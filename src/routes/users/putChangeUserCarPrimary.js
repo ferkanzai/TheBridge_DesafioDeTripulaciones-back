@@ -1,12 +1,16 @@
-const { getAllBrands } = require("../../queries/brands");
+const { putChangeUserCarPrimary } = require("../../queries/users");
 
 module.exports = (db) => async (req, res, next) => {
-  try {
-    const result = await getAllBrands(db);
+  const { userCarId } = req.params;
+  const { id } = req.user;
 
-    if (!result) {
-      next(new Error("something went wrong"));
-      return;
+  console.log(userCarId);
+
+  try {
+    const result = await putChangeUserCarPrimary(db, id, userCarId);
+
+    if (result instanceof Error) {
+      throw result;
     }
 
     const { rows, rowCount } = result;

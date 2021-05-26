@@ -6,6 +6,12 @@ module.exports = (db) => async (req, res, next) => {
   const { alias } = req.query;
 
   try {
+    if (!alias) {
+      const error = new Error("Alias query string is required");
+      error.code = 400;
+      throw error;
+    }
+
     const result = await putUpdateCarAlias(db, id, userCarId, alias);
 
     if (result instanceof Error) {

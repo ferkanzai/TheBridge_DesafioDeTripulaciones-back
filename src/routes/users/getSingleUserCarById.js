@@ -1,17 +1,19 @@
-const { deleteRemoveUserCar } = require("../../queries/users");
+const { getSingleUserCarById } = require("../../queries/users");
 
 module.exports = (db) => async (req, res, next) => {
-  const { carId } = req.params;
   const { id } = req.user;
+  const { userCarId } = req.params;
 
   try {
-    const result = await deleteRemoveUserCar(db, id, carId);
-
-    if (result instanceof Error) {
-      throw result;
-    }
+    const result = await getSingleUserCarById(db, id, userCarId);
 
     const { rows, rowCount } = result;
+
+    if (!rowCount) {
+      const error = new Error("Unabel to find this car");
+      error.code = 404;
+      throw error;
+    }
 
     res.status(200).json({
       success: true,

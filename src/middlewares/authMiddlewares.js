@@ -24,7 +24,6 @@ function authenticateToken(req, res, next) {
         const userFromDb = await getUserById(db, user.id);
 
         if (!userFromDb.rowCount) {
-          console.log("user from db");
           const error = new Error("Not user");
           error.code = 401;
           throw error;

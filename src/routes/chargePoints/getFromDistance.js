@@ -1,7 +1,7 @@
 const { getChargePointsByDistance } = require("../../queries/chargePoints");
 
 module.exports = (db) => async (req, res, next) => {
-  const { latitude, longitude, distance = 100 } = req.query;
+  const { latitude, longitude, distance = 30 } = req.query;
 
   // Madrid: lat: 40.4165000 long: -3.7025600
   try {
