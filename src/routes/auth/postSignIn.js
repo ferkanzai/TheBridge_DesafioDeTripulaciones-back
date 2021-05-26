@@ -19,8 +19,11 @@ module.exports = (db) => async (req, res, next) => {
       !foundUser.length ||
       // !foundUser2 ||
       !bcrypt.compareSync(password, foundUser[0].password)
-    )
-      throw new Error("Bad credentials");
+    ) {
+      const error = new Error("Bad credentials");
+      error.code = 403;
+      throw error;
+    }
 
     const payload = {
       id: foundUser[0].id,
