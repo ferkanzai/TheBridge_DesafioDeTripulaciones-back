@@ -1,11 +1,9 @@
 const { sql } = require("slonik");
 
-const getCarsByBrand = async (db, brand) => {
+const getCarsByBrand = async (db, brandId) => {
   try {
     return await db.query(sql`
-      SELECT * FROM cars WHERE brand_id IN (
-        SELECT id FROM brands WHERE LOWER(name) = LOWER(${brand})
-      );
+      SELECT * FROM cars WHERE brand_id = ${brandId};
     `);
   } catch (error) {
     console.info("> something went wrong: ", error.message);
@@ -13,12 +11,10 @@ const getCarsByBrand = async (db, brand) => {
   }
 };
 
-const getAvailableCarsByBrand = async (db, brand) => {
+const getAvailableCarsByBrand = async (db, brandId) => {
   try {
     return await db.query(sql`
-    SELECT * FROM cars WHERE brand_id IN (
-      SELECT id FROM brands WHERE LOWER(name) = LOWER(${brand})
-    ) AND available = true;
+    SELECT * FROM cars WHERE brand_id = ${brandId} AND available = true;
     `);
   } catch (error) {
     console.info("> something went wrong: ", error.message);
