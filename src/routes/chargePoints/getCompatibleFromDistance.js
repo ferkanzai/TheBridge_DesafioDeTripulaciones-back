@@ -1,7 +1,7 @@
 const { getCompatibleByDistance } = require("../../queries/chargePoints");
 
 module.exports = (db) => async (req, res, next) => {
-  const { latitude, longitude, distance = 100, carIds } = req.query;
+  const { latitude, longitude, distance = 30, carIds } = req.query;
 
   const carsArray = carIds?.split(",").map((id) => Number(id));
 
