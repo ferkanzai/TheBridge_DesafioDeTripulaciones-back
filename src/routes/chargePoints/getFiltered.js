@@ -6,9 +6,10 @@ module.exports = (db) => async (req, res, next) => {
   const { latitude, longitude, distance = 30 } = req.query;
   let { rating, connections, operators } = req.query;
 
-  const operatorsArray = operators
-    ? operators.split(",").map((id) => Number(id))
-    : Array.from({ length: 33 }, (_, i) => i);
+  const operatorsArray =
+    operators.length !== 0
+      ? operators.split(",").map((id) => Number(id))
+      : Array.from({ length: 33 }, (_, i) => i);
 
   // Madrid: lat: 40.4165000 long: -3.7025600
   try {
