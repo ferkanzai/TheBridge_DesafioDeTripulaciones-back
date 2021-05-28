@@ -16,6 +16,7 @@ module.exports = (db) => {
     authenticateToken,
     require("./getCompatibleFromDistance")(db)
   );
+  router.get("/filter", require("./getFiltered")(db));
 
   return router;
 };
