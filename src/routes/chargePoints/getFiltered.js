@@ -1,15 +1,15 @@
-// api/charge-points/filter?rating=3&distance=50&latitude=40.4165000&longitude=-3.7025600&connections=2&operators=8,18,11
-
 const { getFiltered } = require("../../queries/chargePoints");
 
 module.exports = (db) => async (req, res, next) => {
-  const { latitude, longitude, distance = 30 } = req.query;
-  let { rating, connections, operators } = req.query;
-
-  const operatorsArray =
-    operators.length !== 0
-      ? operators.split(",").map((id) => Number(id))
-      : Array.from({ length: 33 }, (_, i) => i);
+  const {} = req.query;
+  let {
+    latitude,
+    longitude,
+    distance = 30,
+    rating,
+    connections,
+    operators,
+  } = req.query;
 
   // Madrid: lat: 40.4165000 long: -3.7025600
   try {
@@ -21,8 +21,16 @@ module.exports = (db) => async (req, res, next) => {
       throw error;
     }
 
-    if (!rating) rating = 0;
-    if (!connections) connections = 0;
+    rating = rating === undefined ? Number(rating) : 0;
+    connections = connections === "null" ? 0 : Number(connections);
+    latitude = Number(latitude);
+    longitude = Number(longitude);
+    distance = Number(distance);
+
+    const operatorsArray =
+      operators === "false" || operators.length === 0
+        ? Array.from({ length: 33 }, (_, i) => i + 1)
+        : operators.split(",").map((id) => Number(id));
 
     const result = await getFiltered(
       db,

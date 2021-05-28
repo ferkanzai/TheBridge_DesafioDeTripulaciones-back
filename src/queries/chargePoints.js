@@ -83,7 +83,7 @@ const getCompatible = async (db, carIds) => {
       for (const type of allTypes) {
         newCP.push(
           ...(await tx.many(sql`
-          SELECT DISTINCT cp.id, cp.latitude, cp.longitude, o.name AS operator_name, o.cost AS price
+          SELECT DISTINCT cp.*, o.name AS operator_name, o.cost AS price
             FROM charge_points AS cp JOIN connections AS c ON cp.id = c.charge_point_id
           JOIN operators AS o ON cp.operator_id = o.id
           WHERE c.connection_type ILIKE ('%' || ${type} || '%') 
@@ -136,7 +136,7 @@ const getCompatibleByDistance = async (
       for (const type of allTypes) {
         newCP.push(
           ...(await tx.many(sql`
-          SELECT DISTINCT cp.latitude, cp.longitude, 
+          SELECT DISTINCT cp.* 
             o.name AS operator_name, o.cost AS price 
           FROM charge_points AS cp JOIN connections AS c ON cp.id = c.charge_point_id
             JOIN operators AS o ON cp.operator_id = o.id,
@@ -165,8 +165,7 @@ const getFiltered = async (
 ) => {
   try {
     return await db.query(sql`
-      SELECT cp.id AS charge_point_id, cp.latitude, cp.longitude, 
-        o.name AS operator_name, o.cost AS price
+      SELECT cp.*, o.name AS operator_name, o.cost AS price
       FROM charge_points AS cp JOIN operators AS o ON cp.operator_id = o.id,
         LATERAL distance(cp.latitude, cp.longitude, ${latitude}, ${longitude}) distance
       WHERE distance < ${distance} AND o.id = ANY(${sql.array(
