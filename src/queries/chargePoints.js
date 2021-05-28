@@ -83,9 +83,10 @@ const getCompatible = async (db, carIds) => {
       for (const type of allTypes) {
         newCP.push(
           ...(await tx.many(sql`
-          SELECT cp.latitude, cp.longitude, c.id AS connection_id, c.connection_type, o.name AS operator_name, o.cost AS price FROM charge_points AS cp JOIN connections AS c ON cp.id = c.charge_point_id
+          SELECT DISTINCT cp.id, cp.latitude, cp.longitude, o.name AS operator_name, o.cost AS price
+            FROM charge_points AS cp JOIN connections AS c ON cp.id = c.charge_point_id
           JOIN operators AS o ON cp.operator_id = o.id
-          WHERE c.connection_type ILIKE ('%' || ${type} || '%')
+          WHERE c.connection_type ILIKE ('%' || ${type} || '%') 
         `))
         );
       }
@@ -135,7 +136,7 @@ const getCompatibleByDistance = async (
       for (const type of allTypes) {
         newCP.push(
           ...(await tx.many(sql`
-          SELECT cp.latitude, cp.longitude, c.id AS connection_id, c.connection_type, 
+          SELECT DISTINCT cp.latitude, cp.longitude, 
             o.name AS operator_name, o.cost AS price 
           FROM charge_points AS cp JOIN connections AS c ON cp.id = c.charge_point_id
             JOIN operators AS o ON cp.operator_id = o.id,
@@ -153,10 +154,39 @@ const getCompatibleByDistance = async (
   }
 };
 
+const getFiltered = async (
+  db,
+  latitude,
+  longitude,
+  distance,
+  rating,
+  connections,
+  operatorsArray
+) => {
+  try {
+    return await db.query(sql`
+      SELECT cp.id AS charge_point_id, cp.latitude, cp.longitude, 
+        o.name AS operator_name, o.cost AS price
+      FROM charge_points AS cp JOIN operators AS o ON cp.operator_id = o.id,
+        LATERAL distance(cp.latitude, cp.longitude, ${latitude}, ${longitude}) distance
+      WHERE distance < ${distance} AND o.id = ANY(${sql.array(
+      operatorsArray,
+      "int4"
+    )}) AND cp.rating > ${rating} AND cp.id IN (
+          SELECT charge_point_id FROM connections 
+            GROUP BY charge_point_id HAVING COUNT(charge_point_id) > ${connections});
+      `);
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getAllChargePoints,
   getChargePointsByDistance,
   postRate,
   getCompatible,
   getCompatibleByDistance,
+  getFiltered,
 };
