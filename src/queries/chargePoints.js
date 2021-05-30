@@ -1,9 +1,11 @@
 const { sql } = require("slonik");
 
-const getAllChargePoints = async (db) => {
+const getAllChargePoints = async (db, latitude, longitude) => {
   try {
     return await db.query(sql`
-      SELECT * FROM charge_points;
+      SELECT cp.*, distance.*, o.name AS operator, o.cost AS price FROM charge_points AS cp
+        JOIN operators AS o ON cp.operator_id = o.id,
+        LATERAL distance(cp.latitude, cp.longitude, ${latitude}, ${longitude}) distance
     `);
   } catch (error) {
     console.info("> something went wrong: ", error.message);

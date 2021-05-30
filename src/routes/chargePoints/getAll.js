@@ -1,8 +1,19 @@
 const { getAllChargePoints } = require("../../queries/chargePoints");
 
 module.exports = (db) => async (req, res, next) => {
+  const { latitude, longitude, distance = 30 } = req.query;
+
+  // Madrid: lat: 40.4165000 long: -3.7025600
   try {
-    const result = await getAllChargePoints(db);
+    if (!latitude || !longitude) {
+      const error = new Error(
+        "Latitude and longitude parameters are mandatory"
+      );
+      error.code = 400;
+      throw error;
+    }
+
+    const result = await getAllChargePoints(db, latitude, longitude);
 
     if (result instanceof Error) {
       next(result);
