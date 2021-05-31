@@ -167,7 +167,7 @@ const getFiltered = async (
 ) => {
   try {
     return await db.query(sql`
-      SELECT cp.*, o.name AS operator_name, o.cost AS price
+      SELECT cp.*, o.name AS operator_name, o.cost AS price, distance.*
       FROM charge_points AS cp JOIN operators AS o ON cp.operator_id = o.id,
         LATERAL distance(cp.latitude, cp.longitude, ${latitude}, ${longitude}) distance
       WHERE distance < ${distance} AND o.id = ANY(${sql.array(
@@ -183,6 +183,70 @@ const getFiltered = async (
   }
 };
 
+const getFilteredAndCompatible = async (
+  db,
+  latitude,
+  longitude,
+  distance,
+  rating,
+  connections,
+  operatorsArray,
+  carIds
+) => {
+  try {
+    return await db.transaction(async (tx) => {
+      const chargeTypes = await tx.many(sql`
+        SELECT charge_port, fast_charge_port FROM cars WHERE id = ANY(${sql.array(
+          carIds,
+          "int4"
+        )}) 
+      `);
+
+      const chargeType = Array.from(
+        new Set(
+          chargeTypes.map((type) => type.charge_port).filter((type) => type)
+        )
+      );
+
+      const fastChargeType = Array.from(
+        new Set(
+          chargeTypes
+            .map((type) => type.fast_charge_port)
+            .filter((type) => type)
+        )
+      );
+
+      const allTypes = [...chargeType, ...fastChargeType];
+
+      const newCP = [];
+
+      for (const type of allTypes) {
+        newCP.push(
+          ...(await tx.many(sql`
+          SELECT DISTINCT cp.*,
+            o.name AS operator_name, o.cost AS price , distance.*
+          FROM charge_points AS cp JOIN connections AS c ON cp.id = c.charge_point_id
+            JOIN operators AS o ON cp.operator_id = o.id,
+            LATERAL distance(cp.latitude, cp.longitude, ${latitude}, ${longitude}) distance
+          WHERE c.connection_type ILIKE ('%' || ${type} || '%') AND distance < ${distance}
+          AND o.id = ANY(${sql.array(
+            operatorsArray,
+            "int4"
+          )}) AND cp.rating > ${rating} AND cp.id IN (
+                SELECT charge_point_id FROM connections 
+                  GROUP BY charge_point_id HAVING COUNT(charge_point_id) > ${connections});
+        `))
+        );
+      }
+
+      return Array.from(new Set(newCP));
+    });
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getAllChargePoints,
   getChargePointsByDistance,
@@ -190,4 +254,5 @@ module.exports = {
   getCompatible,
   getCompatibleByDistance,
   getFiltered,
+  getFilteredAndCompatible,
 };

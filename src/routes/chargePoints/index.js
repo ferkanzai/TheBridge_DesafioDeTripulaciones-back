@@ -17,6 +17,11 @@ module.exports = (db) => {
     require("./getCompatibleFromDistance")(db)
   );
   router.get("/filter", require("./getFiltered")(db));
+  router.get(
+    "/filter-and-compatible",
+    authenticateToken,
+    require("./getFiltered")(db)
+  );
 
   return router;
 };

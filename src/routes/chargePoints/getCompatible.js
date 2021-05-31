@@ -19,8 +19,6 @@ module.exports = (db) => async (req, res, next) => {
       throw error;
     }
 
-    const { rows, rowCount } = result;
-
     res.status(200).json({
       success: true,
       count: result.length,
