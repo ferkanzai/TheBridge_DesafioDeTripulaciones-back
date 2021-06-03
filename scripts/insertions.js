@@ -43,6 +43,7 @@ const insertOperators = async (operators) => {
 const mappingChargePoints = (points) => {
   return points.map((point) => {
     const pointMapped = {
+      apiId: point.id,
       latitude: point.geometry.coordinates[1],
       longitude: point.geometry.coordinates[0],
       town: point.properties.poi.addressInfo.town || null,
@@ -91,6 +92,7 @@ const insertChargePoints = async (points) => {
 
         const pointIdResult = await tx.query(sql`
           INSERT INTO charge_points (
+            api_id,
             latitude,
             longitude,
             last_verified,
@@ -104,6 +106,7 @@ const insertChargePoints = async (points) => {
             rating,
             votes
           ) VALUES (
+            ${point.pointMapped.apiId},
             ${point.pointMapped.latitude},
             ${point.pointMapped.longitude},
             ${point.pointMapped.lastVerified},

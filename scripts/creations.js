@@ -144,6 +144,7 @@ const createChargePointsTable = async () => {
     await db.query(sql`
       CREATE TABLE IF NOT EXISTS charge_points (
         id SERIAL UNIQUE,
+        api_id INTEGER NOT NULL,
         latitude FLOAT NOT NULL,
         longitude FLOAT NOT NULL,
         last_verified TIMESTAMP,
