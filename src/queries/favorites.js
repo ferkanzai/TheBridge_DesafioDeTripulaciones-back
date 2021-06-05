@@ -3,12 +3,10 @@ const { sql } = require("slonik");
 const getFavorites = async (db, userId) => {
   try {
     return await db.query(sql`
-      SELECT charge_points.*, operators.name AS operator, operators.cost
+      SELECT favs.id AS fav_id, charge_points.*, operators.name AS operator, operators.cost
       FROM charge_points JOIN operators ON charge_points.operator_id = operators.id
-      WHERE charge_points.id IN (
-        SELECT charge_point_id FROM user_charge_point_favorites
-        WHERE user_id = ${userId}
-      );
+      JOIN user_charge_point_favorites favs ON favs.charge_point_id = charge_points.id
+      WHERE user_id = ${userId};
     `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
