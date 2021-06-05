@@ -236,6 +236,17 @@ const putChangeUserCarPrimary = async (db, userId, userCarId) => {
   }
 };
 
+const getFullProfile = async (db, userId) => {
+  try {
+    return await db.query(sql`
+      SELECT * FROM users WHERE id = ${userId};
+    `);
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getUserById,
   getUserByEmail,
@@ -246,4 +257,5 @@ module.exports = {
   putUpdateCarAlias,
   putChangeUserCarPrimary,
   getSingleUserCarById,
+  getFullProfile,
 };
