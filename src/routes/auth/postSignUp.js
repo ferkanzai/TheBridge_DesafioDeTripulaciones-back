@@ -5,10 +5,10 @@ const { getUserByEmail, postInsertUser } = require("../../queries/users");
 
 module.exports = (db) => async (req, res, next) => {
   try {
-    const { email, password } = req.body;
+    const { email, password, name } = req.body;
 
-    if (!email || !password) {
-      const error = new Error("Email and password required in body");
+    if (!email || !password || !name) {
+      const error = new Error("Email, password and name are required in body");
       error.code = 400;
       throw error;
     }
@@ -24,6 +24,7 @@ module.exports = (db) => async (req, res, next) => {
     const newUser = {
       email,
       password: bcrypt.hashSync(password, 12),
+      name,
       hasCar: false,
     };
 

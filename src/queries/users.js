@@ -28,10 +28,12 @@ const postInsertUser = async (db, user) => {
       INSERT INTO users (
         email,
         password,
+        name,
         has_car
       ) VALUES (
         ${user.email},
         ${user.password},
+        ${user.name},
         ${user.hasCar}
       ) RETURNING id, email, has_car, is_active;
     `);

@@ -8,6 +8,7 @@ const createUserTable = async () => {
         id SERIAL UNIQUE,
         email TEXT UNIQUE NOT NULL,
         password TEXT NOT NULL,
+        name TEXT NOT NULL,
         has_car BOOLEAN NOT NULL,
         is_active BOOLEAN NOT NULL DEFAULT true
       );
