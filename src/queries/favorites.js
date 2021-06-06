@@ -41,8 +41,21 @@ const deleteRemoveFavorite = async (db, favoriteId) => {
   }
 };
 
+const getIsFavorite = async (db, userId, chargePointId) => {
+  try {
+    return await db.query(sql`
+      SELECT id AS fav_id, charge_point_id AS id FROM user_charge_point_favorites
+      WHERE user_id = ${userId} AND charge_point_id = ${chargePointId};
+    `);
+  } catch (error) {
+    console.info("> something went wrong:", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getFavorites,
   postAddFavorite,
   deleteRemoveFavorite,
+  getIsFavorite,
 };
