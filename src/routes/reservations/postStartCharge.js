@@ -5,7 +5,6 @@ const {
   postStartFastCharge,
 } = require("../../queries/reservations");
 const { getUserCars } = require("../../queries/users");
-const { convertDateToUTC } = require("../../utils/converDateToUTC");
 
 module.exports = (db) => async (req, res, next) => {
   const { id } = req.user;
@@ -69,12 +68,6 @@ module.exports = (db) => async (req, res, next) => {
     }
 
     const { rows, rowCount } = result;
-
-    if (rows.length) {
-      rows[0].reservation_date = convertDateToUTC(rows[0].reservation_date);
-      rows[0].expiration_date = convertDateToUTC(rows[0].expiration_date);
-      rows[0].charge_end_date = convertDateToUTC(rows[0].charge_end_date);
-    }
 
     res.status(200).json({
       success: true,

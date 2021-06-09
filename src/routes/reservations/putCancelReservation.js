@@ -1,13 +1,11 @@
 const { putStopReservationOrCharge } = require("../../queries/reservations");
-const { convertDateToUTC } = require("../../utils/converDateToUTC");
 
 module.exports = (db) => async (req, res, next) => {
   const { reservationId } = req.params;
+  const { id } = req.user;
 
   try {
-    const result = await putStopReservationOrCharge(db, reservationId);
-
-    console.log(result);
+    const result = await putStopReservationOrCharge(db, reservationId, id);
 
     if (result instanceof Error) {
       next(result);
@@ -15,9 +13,6 @@ module.exports = (db) => async (req, res, next) => {
     }
 
     const { rows, rowCount } = result;
-
-    rows[0].reservation_date = convertDateToUTC(rows[0].reservation_date);
-    rows[0].expiration_date = convertDateToUTC(rows[0].expiration_date);
 
     res.status(200).json({
       success: true,
