@@ -78,8 +78,6 @@ const getCompatible = async (db, carIds) => {
 
       const allTypes = [...chargeType, ...fastChargeType];
 
-      console.log(allTypes);
-
       const newCP = [];
 
       for (const type of allTypes) {
@@ -247,6 +245,20 @@ const getFilteredAndCompatible = async (
   }
 };
 
+const getSingleChargePoint = async (db, chargePointId, latitude, longitude) => {
+  try {
+    return await db.query(sql`
+    SELECT cp.*, distance.*, o.name AS operator, o.cost AS price FROM charge_points AS cp
+    JOIN operators AS o ON cp.operator_id = o.id,
+    LATERAL distance(cp.latitude, cp.longitude, ${latitude}, ${longitude}) distance
+      WHERE cp.id = ${chargePointId}
+    `);
+  } catch (error) {
+    console.info("> something went wrong: ", error.message);
+    return error;
+  }
+};
+
 module.exports = {
   getAllChargePoints,
   getChargePointsByDistance,
@@ -255,4 +267,5 @@ module.exports = {
   getCompatibleByDistance,
   getFiltered,
   getFilteredAndCompatible,
+  getSingleChargePoint,
 };
