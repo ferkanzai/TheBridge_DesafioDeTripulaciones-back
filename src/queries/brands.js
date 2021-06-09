@@ -7,6 +7,7 @@ const getAllBrands = async (db) => {
         FROM brands JOIN cars ON cars.brand_id = brands.id
       WHERE cars.available = true
       GROUP BY brands.id, brands.name
+      ORDER BY brands.name ASC
       ;
     `);
   } catch (error) {

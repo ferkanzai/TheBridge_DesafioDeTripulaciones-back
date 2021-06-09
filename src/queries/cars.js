@@ -3,7 +3,8 @@ const { sql } = require("slonik");
 const getCarsByBrand = async (db, brandId) => {
   try {
     return await db.query(sql`
-      SELECT * FROM cars WHERE brand_id = ${brandId};
+      SELECT * FROM cars WHERE brand_id = ${brandId}
+      ORDER BY model ASC;
     `);
   } catch (error) {
     console.info("> something went wrong: ", error.message);
