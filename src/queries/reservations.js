@@ -3,12 +3,14 @@ const { sql } = require("slonik");
 const getReservations = async (db, userId) => {
   try {
     return await db.query(sql`
-      SELECT * FROM reservations
-      WHERE user_id = ${userId} 
-        AND is_past_reservation = false
+      SELECT r.*, r.id AS reservation_id, cp.*, cp.id AS charge_point_id, c.*
+      FROM reservations r JOIN connections c ON r.connection_id = c.id
+      JOIN charge_points cp ON c.charge_point_id = cp.id 
+      WHERE r.user_id = ${userId} 
+        AND r.is_past_reservation = false
         AND (
-          expiration_date > CURRENT_TIMESTAMP at time zone 'utc'
-          OR charge_end_date > CURRENT_TIMESTAMP at time zone 'utc'
+          r.expiration_date > CURRENT_TIMESTAMP at time zone 'utc'
+          OR r.charge_end_date > CURRENT_TIMESTAMP at time zone 'utc'
         );
     `);
   } catch (error) {
@@ -20,9 +22,12 @@ const getReservations = async (db, userId) => {
 const getPastReservations = async (db, userId) => {
   try {
     return await db.query(sql`
-      SELECT * FROM reservations
-      WHERE user_id = ${userId} 
-        AND is_past_reservation = true;
+      SELECT r.*, r.id AS reservation_id, cp.*, cp.id AS charge_point_id, c.*
+      FROM reservations r JOIN connections c ON r.connection_id = c.id
+      JOIN charge_points cp ON c.charge_point_id = cp.id
+      WHERE r.user_id = ${userId} 
+        AND r.is_past_reservation = true
+      ORDER BY r.reservation_date DESC;
     `);
   } catch (error) {
     console.info("> something went wrong: ", error.message);
