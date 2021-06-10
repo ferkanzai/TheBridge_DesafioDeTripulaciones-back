@@ -193,12 +193,41 @@ const getSingleUserCarById = async (db, userId, userCarId) => {
 
 const putUpdateCarAlias = async (db, userId, userCarId, alias) => {
   try {
-    return await db.query(sql`
-      UPDATE user_car
-        SET alias = ${alias}
-        WHERE id = ${userCarId} AND user_id = ${userId}
-      RETURNING *;
-    `);
+    return await db.transaction(async (tx) => {
+      const updatedCar = await tx.query(sql`
+        UPDATE user_car
+          SET alias = ${alias}
+          WHERE id = ${userCarId} AND user_id = ${userId}
+        RETURNING *;
+      `);
+
+      if (!updatedCar.rowCount) {
+        const error = new Error("Unable to update car");
+        error.code = 400;
+        throw error;
+      }
+
+      return await tx.query(sql`
+        SELECT
+          user_car.id AS user_car_id,
+          brands.name,
+          cars.id AS car_id,
+          cars.model,
+          cars.range,
+          cars.total_power,
+          cars.drive_type,
+          cars.battery_useable,
+          cars.charge_port,
+          cars.fast_charge_port,
+          user_car.alias,
+          user_car.inserted_at,
+          user_car.is_primary_car
+        FROM brands 
+          JOIN cars ON brands.id = cars.brand_id 
+          JOIN user_car ON cars.id = user_car.car_id
+        WHERE user_car.user_id = ${userId} AND user_car.id = ${userCarId};
+      `);
+    });
   } catch (error) {
     console.info("> something went wrong:", error.message);
     return error;
