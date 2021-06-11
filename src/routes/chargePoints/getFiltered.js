@@ -9,6 +9,7 @@ module.exports = (db) => async (req, res, next) => {
     rating,
     connections,
     operators,
+    connectionTypes,
   } = req.query;
 
   // Madrid: lat: 40.4165000 long: -3.7025600
@@ -32,6 +33,8 @@ module.exports = (db) => async (req, res, next) => {
         ? Array.from({ length: 33 }, (_, i) => i + 1)
         : operators.split(",").map((id) => Number(id));
 
+    const connectionsArray = connectionTypes?.split(",").map((c) => c);
+
     const result = await getFiltered(
       db,
       latitude,
@@ -39,7 +42,8 @@ module.exports = (db) => async (req, res, next) => {
       distance,
       rating,
       connections,
-      operatorsArray
+      operatorsArray,
+      connectionsArray
     );
 
     if (result instanceof Error) {

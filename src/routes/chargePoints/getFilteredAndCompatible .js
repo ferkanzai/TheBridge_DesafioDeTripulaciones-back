@@ -9,6 +9,7 @@ module.exports = (db) => async (req, res, next) => {
     rating,
     connections,
     operators,
+    connectionTypes,
   } = req.query;
 
   const carsArray = carIds?.split(",").map((id) => Number(id));
@@ -40,6 +41,8 @@ module.exports = (db) => async (req, res, next) => {
         ? Array.from({ length: 33 }, (_, i) => i + 1)
         : operators.split(",").map((id) => Number(id));
 
+    const connectionsArray = connectionTypes?.split(",").map((c) => c);
+
     const result = await getFilteredAndCompatible(
       db,
       latitude,
@@ -48,7 +51,8 @@ module.exports = (db) => async (req, res, next) => {
       rating,
       connections,
       operatorsArray,
-      carsArray
+      carsArray,
+      connectionsArray
     );
 
     if (!result) {

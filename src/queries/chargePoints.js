@@ -161,19 +161,22 @@ const getFiltered = async (
   distance,
   rating,
   connections,
-  operatorsArray
+  operatorsArray,
+  connectionsArray
 ) => {
   try {
     return await db.query(sql`
       SELECT cp.*, o.name AS operator_name, o.cost AS price, distance.*
-      FROM charge_points AS cp JOIN operators AS o ON cp.operator_id = o.id,
+      FROM charge_points AS cp JOIN operators AS o ON cp.operator_id = o.id
+      JOIN connections c ON cp.id = c.charge_point_id,
         LATERAL distance(cp.latitude, cp.longitude, ${latitude}, ${longitude}) distance
       WHERE distance < ${distance} AND o.id = ANY(${sql.array(
       operatorsArray,
       "int4"
     )}) AND cp.rating > ${rating} AND cp.id IN (
           SELECT charge_point_id FROM connections 
-            GROUP BY charge_point_id HAVING COUNT(charge_point_id) > ${connections});
+            GROUP BY charge_point_id HAVING COUNT(charge_point_id) > ${connections})
+        AND c.connection_type ILIKE ANY(${sql.array(connectionsArray, "text")});
       `);
   } catch (error) {
     console.info("> something went wrong:", error.message);
@@ -189,7 +192,8 @@ const getFilteredAndCompatible = async (
   rating,
   connections,
   operatorsArray,
-  carIds
+  carIds,
+  connectionsArray
 ) => {
   try {
     return await db.transaction(async (tx) => {
@@ -232,7 +236,11 @@ const getFilteredAndCompatible = async (
             "int4"
           )}) AND cp.rating > ${rating} AND cp.id IN (
                 SELECT charge_point_id FROM connections 
-                  GROUP BY charge_point_id HAVING COUNT(charge_point_id) > ${connections});
+                  GROUP BY charge_point_id HAVING COUNT(charge_point_id) > ${connections})
+              AND c.connection_type ILIKE ANY(${sql.array(
+                connectionsArray,
+                "text"
+              )});
         `))
         );
       }
