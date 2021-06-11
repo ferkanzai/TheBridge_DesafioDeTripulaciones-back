@@ -33,7 +33,10 @@ module.exports = (db) => async (req, res, next) => {
         ? Array.from({ length: 33 }, (_, i) => i + 1)
         : operators.split(",").map((id) => Number(id));
 
-    const connectionsArray = connectionTypes?.split(",").map((c) => c);
+    const connectionsArray =
+      connectionTypes === "" || connectionTypes === "false"
+        ? ["%%"]
+        : connectionTypes?.split(",").map((c) => c);
 
     const result = await getFiltered(
       db,
